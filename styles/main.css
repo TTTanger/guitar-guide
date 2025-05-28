@@ -1,0 +1,27 @@
+:root {
+    --main-font: 'Arial', sans-serif;
+    --main-text-color: #333333;
+    --background-color: #ffffff;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font);
+    color: var(--main-text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

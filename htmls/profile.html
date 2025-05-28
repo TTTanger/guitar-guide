@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="../styles/style.css" rel="stylesheet">
+    <link href="../styles/profile.css" rel="stylesheet">
+    <script src="../scripts/auth.js" defer></script>
+    <script src="../scripts/profile.js" defer></script>
+    <script src="../scripts/logout.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="user-controls">
+            <a href="profile.html" class="user-profile" style="background-color:tomato">
+                <img id="user-avatar" alt="User Avatar" />
+                <span id="user-info"></span>
+            </a>
+            <a href="#" id="logout-link">Log out</a>
+        </div>
+        <div class="container">
+            <div id="branding">
+                <h1>Profile</h1>
+                <p>Here you can manage your account</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li class="current"><a href="index.html"><i class="fas fa-guitar"></i>Basics</a></li>
+            <li><a href="chords.html"><i class="fas fa-music"></i>Chords</a></li>
+            <li><a href="quiz.html"><i class="fas fa-question-circle"></i>Quiz</a></li>
+        </ul>
+    </nav>
+
+    <main class="profile-container">
+        <section class="profile-header">
+            <div class="profile-avatar">
+                <img src="../images/default_avatar.jpeg" alt="Profile Avatar">
+            </div>
+            <div class="profile-info">
+                <h2>Username</h2>
+                <p>Member since: <span id="join-date">Date</span></p>
+            </div>
+        </section>
+
+        <section class="profile-content">
+            <div class="profile-stats">
+                <h3>Statistics</h3>
+                <ul>
+                    <li>Best Score: <span id="best-score"></span></li>
+                </ul>
+            </div>
+
+            <div class="profile-settings">
+                <h3>Account Settings</h3>
+                <form id="profile-form">
+                    <div class="form-group">
+                        <label for="change-avatar">Change Avatar</label>
+                        <div class="file-upload-container" id="upload-container">
+                            <input type="file" id="avatar-input" accept="image/*">
+                            <div class="file-upload-content">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Drag and drop an image here or click to select</p>
+                                <span class="file-hint">Supported formats: JPG, PNG, GIF</span>
+                            </div>
+                        </div>
+                        <button type="button" id="save-avatar">Save</button>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="change-password">Change Password</label>
+                        <input type="password" id="current-password" placeholder="Current Password">
+                        <input type="password" id="new-password" placeholder="New Password">
+                        <input type="password" id="confirm-password" placeholder="Confirm New Password">
+                        <button type="button" id="save-password">Save</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>&copy; 2025 Guitar Guide. All rights reserved.</footer>
+</body>
+
+</html>

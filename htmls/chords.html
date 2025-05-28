@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Guitar Chords Tutorial</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="../styles/style.css" rel="stylesheet" />
+    <script src="../scripts/auth.js" defer></script>
+    <script src="../scripts/chords.js" defer></script>
+    <script src="../scripts/functions.js" defer></script>
+    <script src="../scripts/logout.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="user-controls">
+            <a href="profile.html" class="user-profile">
+                <img id="user-avatar" src="../images/Guitar.jpeg" alt="User Avatar" />
+                <span id="user-info"></span>
+            </a>
+            <a href="#" id="logout-link">Log out</a>
+        </div>
+        <div class="container">
+            <div id="branding">
+                <h1 data-translate="main.title">Guitar Basics Tutorial</h1>
+                <p data-translate="main.subtitle">Learn, Remember, Practice</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-guitar"></i>Basics</a></li>
+            <li class="current"><a href="chords.html"><i class="fas fa-music"></i>Chords</a></li>
+            <li><a href="quiz.html"><i class="fas fa-question-circle"></i>Quiz</a></li>
+        </ul>
+    </nav>
+
+    <aside>
+        <button id="fontInc">Font+</button>
+        <button id="fontDec">Font-</button>
+        <button id="cn">中文</button>
+        <button id="en">English</button>
+        <button id="de">Deutsch</button>
+    </aside>
+
+    <main>
+        <div class="container">
+            <section id="chords">
+                <h2 data-translate="chords.title">Basic Guitar Chords</h2>
+                <p data-translate="chords.subtitle">Learn the essential chords that every guitarist should know.</p>
+                <div id="chords-container">
+                    <!-- Chord cards will be generated here by JavaScript -->
+                </div>
+                
+                <div class="pagination-controls">
+                    <button id="prev-page" class="pagination-btn" disabled>Previous</button>
+                    <span class="page-info">Page <span id="current-page">1</span> of <span id="total-pages">1</span></span>
+                    <button id="next-page" class="pagination-btn">Next</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>&copy; 2025 Guitar Guide. All rights reserved.</footer>
+</body>
+
+</html>

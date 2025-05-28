@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../styles/register.css">
+    <script type="module" src="../scripts/register.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Guitar Guide</title>
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-header">
+            <i class="fas fa-guitar"></i>
+            <h1>Create Account</h1>
+            <p>Join Guitar Guide today</p>
+        </div>
+        
+        <div id="error-message"></div>
+        
+        <form action="../phps/register.php" method="post">
+            <div class="input-group">
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="username" required placeholder="Username">
+                </div>
+                
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" required placeholder="Password">
+                </div>
+                
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="confirm_password" required placeholder="Confirm Password">
+                </div>
+            </div>
+
+            <div class="terms">
+                <label class="checkbox-container">
+                    <input type="checkbox" required>
+                    <span class="checkmark"></span>
+                    <span>I agree to the <a href="terms.html">Terms & Conditions</a></span>
+                </label>
+            </div>
+        
+            <button type="submit" class="register-button">
+                <span>Create Account</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+            
+            <div class="login-link">
+                <span>Already have an account?</span>
+                <a href="login.html">Sign in</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
