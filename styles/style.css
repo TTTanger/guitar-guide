@@ -401,8 +401,8 @@ aside {
 /* Apply primary-button styles */
 .pagination-btn,
 #start-quiz,
-#quit-button,
-#next-button,
+.quit-button,
+.next-button,
 .quiz-results button {
     composes: primary-button;
 }
@@ -544,7 +544,7 @@ footer {
     font-size: 14px;
 }
 
-#start-quiz, #quit-button, #next-button {
+#start-quiz, .quit-button, .next-button {
     min-width: 120px;
     max-width: 150px;
     padding: 12px 25px;
@@ -554,13 +554,15 @@ footer {
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-size: 16px;
+    margin: 0 8px;
 }
 
-#start-quiz:hover, #quit-button:hover, #next-button:hover {
+#start-quiz:hover, .quit-button:hover, .next-button:hover {
     background-color: #e8491d;
 }
 
-#next-button:disabled {
+.next-button:disabled {
     background-color: #cccccc;
     cursor: not-allowed;
 }
@@ -637,9 +639,10 @@ footer {
 }
 
 .button-container {
-    width: 100%;
-    gap: 20px;
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
 }
 
 .quiz-results {

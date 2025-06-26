@@ -77,7 +77,7 @@ class ChordsPagination {
         const newPage = this.currentPage + delta;
         if (newPage >= 1 && newPage <= this.totalPages) {
             this.currentPage = newPage;
-            await this.displayChords();  // 等待显示和语言更新完成
+            await this.displayChords(); 
         }
     }
 }

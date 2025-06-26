@@ -10,6 +10,7 @@ class FontSizeController {
             h1: 2,    // 32px at default
             h2: 1.5,  // 24px at default
             h3: 1.25, // 20px at default
+            label: 1.125, // 18px at default
             p: 1,     // 16px at default
             small: 0.875 // 14px at default
         };
@@ -112,6 +113,8 @@ class LanguageController {
 
 const fontController = new FontSizeController();
 const langController = new LanguageController();
+window.langController = langController;
+window.fontController = fontController;
 
 // Event Listeners
 document.addEventListener('DOMContentLoaded', () => {

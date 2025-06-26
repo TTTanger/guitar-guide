@@ -21,8 +21,7 @@ let currentQuestionType;
 
 let currentChord;
 let score = 0;
-let totalQuestions = 0;
-let maxQuestions = 10;
+let maxQuestions = 5;
 let currentQuestionNumber = 0;
 
 function shuffleArray(array) {
@@ -66,23 +65,48 @@ function initializeQuiz() {
     const startButton = document.getElementById('start-quiz');
     const questionCountSelect = document.getElementById('question-count');
     const quizContainer = document.getElementById('quiz-container');
+    quizContainer.innerHTML = `<div id="question-container">
+                        <h3 id="question-text"></h3>
+                        <h2 id="chord-name"></h2>
+                    </div>
+                    <div id="options-container"></div>
+                    <div id="result-message"></div>`;
 
     startButton.addEventListener('click', () => {
         maxQuestions = parseInt(questionCountSelect.value);
         currentQuestionNumber = 0;
         score = 0;
-        totalQuestions = 0;
         document.querySelector('.quiz-settings').style.display = 'none';
         quizContainer.style.display = 'block';
         createNewQuestion();
+        if (window.langController) window.langController.updateContent();
     });
+    if (window.langController) {
+        if (window.langController.translations && Object.keys(window.langController.translations).length > 0) {
+            window.langController.updateContent();
+        } else {
+            const origLoad = window.langController.loadTranslations;
+            window.langController.loadTranslations = async function () {
+                await origLoad.apply(this, arguments);
+                window.langController.updateContent();
+            }
+        }
+    }
 }
 
 function createNewQuestion() {
-    currentQuestionNumber++;
     if (currentQuestionNumber > maxQuestions) {
         showResults();
         return;
+    }
+
+    // Empty the result message
+    const resultMessage = document.getElementById('result-message');
+    if (resultMessage) {
+        resultMessage.innerHTML = '';
+
+        resultMessage.removeAttribute('data-translate');
+        resultMessage.style.color = '';
     }
 
     const chords = Object.keys(chordData);
@@ -92,13 +116,22 @@ function createNewQuestion() {
     document.getElementById('chord-name').textContent = currentChord;
     const questionText = document.getElementById('question-text');
     const optionsContainer = document.getElementById('options-container');
-    optionsContainer.innerHTML = '';
+    if (optionsContainer) {
+        optionsContainer.innerHTML = '';
+    }
+
+    // Translate
+    questionText.innerHTML = '';
+    if (currentQuestionType === 'notes') {
+        questionText.setAttribute('data-translate', 'quiz.notesQuestion');
+    } else {
+        questionText.setAttribute('data-translate', 'quiz.imgQuestion');
+    }
+    if (window.langController) window.langController.updateContent();
 
     if (currentQuestionType === 'notes') {
-        questionText.textContent = 'What notes make up this chord?';
         const correctAnswer = chordData[currentChord];
         const options = generateOptions(correctAnswer);
-
         options.forEach(option => {
             const button = document.createElement('button');
             button.className = 'option-button';
@@ -107,10 +140,8 @@ function createNewQuestion() {
             optionsContainer.appendChild(button);
         });
     } else {
-        questionText.textContent = 'Which picture shows this chord?';
         const correctImage = chordsImgs[currentChord];
         const options = generateImageOptions(currentChord);
-
         options.forEach(imgPath => {
             const button = document.createElement('button');
             button.className = 'option-button';
@@ -123,71 +154,98 @@ function createNewQuestion() {
         });
     }
 
-    const buttonContainer = document.createElement('div');
+    // 创建按钮容器
+    const quizContainer = document.getElementById('quiz-container');
+    let buttonContainer = document.querySelector('.button-container');
+    if (buttonContainer && buttonContainer.parentNode) {
+        buttonContainer.parentNode.removeChild(buttonContainer);
+    }
+    buttonContainer = document.createElement('div');
     buttonContainer.className = 'button-container';
-    optionsContainer.appendChild(buttonContainer);
+    quizContainer.appendChild(buttonContainer);
 
+    // 退出按钮
     const quitbutton = document.createElement('button');
-    quitbutton.id = 'quit-button';
+    quitbutton.className = 'quit-button';
+    quitbutton.innerHTML = '<span data-translate="quiz.quit">Quit</span>';
     quitbutton.addEventListener('click', endQuiz);
-    quitbutton.innerHTML = 'Quit'
     buttonContainer.appendChild(quitbutton);
 
+    // 下一题/显示结果按钮
     const nextbutton = document.createElement('button');
-    nextbutton.id = 'next-button';
-    nextbutton.addEventListener('click', createNewQuestion);
-    nextbutton.innerHTML = 'Next'
+    nextbutton.className = 'next-button';
+
+    if (currentQuestionNumber === maxQuestions - 1) {
+        nextbutton.innerHTML = '<span data-translate="quiz.showResult">Show Result</span>';
+        nextbutton.addEventListener('click', () => {
+            currentQuestionNumber++;
+            endQuiz();
+            showResults();
+        });
+    } else {
+        nextbutton.innerHTML = '<span data-translate="quiz.next">Next</span>';
+        nextbutton.addEventListener('click', () => {
+            currentQuestionNumber++;
+            createNewQuestion();
+        });
+    }
     buttonContainer.appendChild(nextbutton);
-    document.getElementById('result-message').textContent = '';
-    document.getElementById('next-button').disabled = true;
+
+    document.querySelectorAll('.next-button').forEach(btn => btn.disabled = true);
+    if (window.langController) window.langController.updateContent();
 }
 
 function checkAnswer(selectedAnswer, correctAnswer, type) {
-    console.log('Check answer:', {
-        selected: selectedAnswer,
-        correct: correctAnswer,
-        type: type
-    });
     const buttons = document.querySelectorAll('.option-button');
-    buttons.forEach(button => {
-        button.disabled = true;
-        if (type === 'images') {
+    let isCorrect = false;
+
+    if (type === 'images') {
+        const selectedFileName = selectedAnswer.split('/').pop();
+        const correctFileName = correctAnswer.split('/').pop();
+        isCorrect = selectedFileName === correctFileName;
+        buttons.forEach(button => {
             const buttonImg = button.querySelector('img');
-            if (buttonImg && buttonImg.src.includes(correctAnswer)) {
-                button.classList.add('correct');
+            if (buttonImg) {
+                const btnFileName = buttonImg.src.split('/').pop();
+                if (btnFileName === correctFileName) {
+                    button.classList.add('correct');
+                }
+                if (btnFileName === selectedFileName && btnFileName !== correctFileName) {
+                    button.classList.add('incorrect');
+                }
             }
-            if (buttonImg && buttonImg.src.includes(selectedAnswer) && selectedAnswer !== correctAnswer) {
-                button.classList.add('incorrect');
-            }
-        } else {
+            button.disabled = true;
+        });
+    } else {
+        isCorrect = selectedAnswer === correctAnswer;
+        buttons.forEach(button => {
             if (button.textContent === correctAnswer) {
                 button.classList.add('correct');
             }
             if (button.textContent === selectedAnswer && selectedAnswer !== correctAnswer) {
                 button.classList.add('incorrect');
             }
-        }
-    });
+            button.disabled = true;
+        });
+    }
+
+    // 只在答对时加分
+    if (isCorrect) {
+        score++;
+    }
 
     const resultMessage = document.getElementById('result-message');
-    if (selectedAnswer === correctAnswer) {
-        resultMessage.textContent = 'Correct!';
+    if (isCorrect) {
+        resultMessage.setAttribute("data-translate", "quiz.correct");
         resultMessage.style.color = 'green';
-        score++;
     } else {
-        resultMessage.textContent = 'Incorrect. Try again!';
+        resultMessage.setAttribute("data-translate", "quiz.incorrect");
         resultMessage.style.color = 'red';
     }
 
-    totalQuestions++;
-    document.getElementById('score').textContent = score;
-    document.getElementById('total').textContent = totalQuestions;
-    document.getElementById('next-button').disabled = false;
+    if (window.langController) window.langController.updateContent();
 
-    // Check if the maximum number of questions has been reached
-    if (totalQuestions >= maxQuestions) {
-        endQuiz();
-    }
+    document.querySelectorAll('.next-button').forEach(btn => btn.disabled = false);
 }
 
 // Function to end the quiz
@@ -209,33 +267,35 @@ function endQuiz() {
 }
 
 function showResults() {
-    const optionsContainer = document.getElementById('options-container');
-    optionsContainer.innerHTML = '';
-    const resultMessage = document.getElementById('result-message');
-    resultMessage.innerHTML = '';
+    const quizContainer = document.getElementById('quiz-container');
 
+    // 结果界面内容
     const resultsHTML = `
         <div class="quiz-results">
-            <h2>Quiz Complete!</h2>
-            <p>Your final score: ${score}/${maxQuestions}</p>
-            <p>Percentage: ${Math.round((score / maxQuestions) * 100)}%</p>
-            <button onclick="restartQuiz()">Try Again</button>
+            <h2 data-translate="quiz.completion">Quiz Complete!</h2>
+            <p>
+                <span data-translate="quiz.finalScore">Your final score:</span>
+                <span id="final-score">${score}</span>/<span id="final-total">${maxQuestions}</span>
+            </p>
+            <p>
+                <span data-translate="quiz.percent">Percentage:</span>
+                <span id="final-percent">${Math.round((score / maxQuestions) * 100)}%</span>
+            </p>
+            <button data-translate="quiz.restart" onclick="restartQuiz()">Try Again</button>
         </div>
     `;
-    optionsContainer.innerHTML = resultsHTML;
+    quizContainer.innerHTML = resultsHTML;
 
-    document.getElementById('question-text').textContent = '';
-    document.getElementById('chord-name').textContent = '';
+    if (window.langController) window.langController.updateContent();
 }
 
 function restartQuiz() {
+    initializeQuiz();
     document.querySelector('.quiz-settings').style.display = 'block';
     document.getElementById('quiz-container').style.display = 'none';
-    document.getElementById('score').textContent = '0';
-    document.getElementById('total').textContent = '0';
+    if (window.langController) window.langController.updateContent();
 }
 
-// Initialize the quiz when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     initializeQuiz();
 });

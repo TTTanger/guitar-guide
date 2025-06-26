@@ -24,6 +24,39 @@
       "F": "The F chord is a major chord. It is composed with F, A, C. Place your fingers as shown in the diagram.",
       "G": "The G chord is a major chord. It is composed with G, B, D. Place your fingers as shown in the diagram.",
       "Am": "The A chord is a major chord. It is composed with A, C, E. Place your fingers as shown in the diagram."
+    },
+    "quiz": {
+      "title": "Test Your Chord Knowledge",
+      "question-count": "Number of Questions:",
+      "start-quiz": "Start Quiz",
+      "completion": "You have completed the quiz",
+      "showResult":"Show Result",
+      "finalScore": "Final Score",
+      "percent": "Percentage: ",
+      "imgQuestion": "Which picture shows this chord?",
+      "notesQuestion": "Which notes make up this chord?",
+      "next": "Next",
+      "restart": "Restart Quiz",
+      "quit": "Quit Quiz",
+      "correct": "Correct!",
+      "score": "Score: ",
+      "incorrect": "Incorrect!"
+    },
+    "profile": {
+      "title": "Profile",
+      "subtitle": "Here you can manage your account",
+      "statistics": "Statistics",
+      "bestScore": "Best Score:",
+      "accountSettings": "Account Settings",
+      "changeAvatar": "Change Avatar",
+      "uploadHint": "Drag and drop an image here or click to select",
+      "supportedFormats": "Supported formats: JPG, PNG, GIF",
+      "save": "Save",
+      "changePassword": "Change Password",
+      "currentPassword": "Current Password",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm New Password",
+      "copyright": "&copy; 2025 Guitar Guide. All rights reserved."
     }
   },
   "zh": {
@@ -51,6 +84,39 @@
       "F": "F和弦是一个大三和弦，它由F、A、C三个音组成。这个和弦有两种按法，一种是大横按按法，另一种是小横按按法，初学者最好从小横按按法开始学起。食指同时按住二弦一品和一弦一品，中指放于二弦二品，无名指放于三弦三品，请按照图示摆放手指。",
       "G": "G和弦是一个大三和弦，它是C调和弦中的属和弦。由G、B、D三个音组成。请按照图示摆放手指。",
       "Am": "A和弦是一个大三和弦。它由A、C、E三个音组成。请按照图示摆放手指。"
+    },
+    "quiz": {
+      "title": "和弦知识小测验",
+      "question-count": "题目数量：",
+      "start-quiz": "开始测验",
+      "completion": "你已完成测验",
+      "showResult": "显示结果",
+      "score": "分数：",
+      "finalScore": "最终得分",
+      "percent": "正确率：",
+      "imgQuestion": "下列哪张图片是该和弦？",
+      "notesQuestion": "该和弦由哪些音组成？",
+      "next": "下一题",
+      "restart": "重新开始",
+      "quit": "退出测验",
+      "correct": "回答正确！",
+      "incorrect": "回答错误!"
+    },
+    "profile": {
+      "title": "个人资料",
+      "subtitle": "您可以在这里管理您的账户",
+      "statistics": "统计信息",
+      "bestScore": "最高分：",
+      "accountSettings": "账户设置",
+      "changeAvatar": "更换头像",
+      "uploadHint": "拖拽图片到此处或点击选择",
+      "supportedFormats": "支持格式：JPG, PNG, GIF",
+      "save": "保存",
+      "changePassword": "修改密码",
+      "currentPassword": "当前密码",
+      "newPassword": "新密码",
+      "confirmPassword": "确认新密码",
+      "copyright": "&copy; 2025 吉他指南. 保留所有权利。"
     }
   },
   "de": {
@@ -78,6 +144,39 @@
       "F": "Der F-Akkord ist ein Dur-Akkord. Er besteht aus den Tönen F, A und C. Platziere deine Finger wie im Diagramm gezeigt.",
       "G": "Der G-Akkord ist ein Dur-Akkord. Er besteht aus den Tönen G, B und D. Platziere deine Finger wie im Diagramm gezeigt.",
       "Am": "Der A-Akkord ist ein Dur-Akkord. Er besteht aus den Tönen A, C und E. Platziere deine Finger wie im Diagramm gezeigt."
+    },
+    "quiz": {
+      "title": "Teste dein Akkordwissen",
+      "question-count": "Anzahl der Fragen:",
+      "start-quiz": "Quiz starten",
+      "showResult": "Ergebnis anzeigen",
+      "completion": "Du hast das Quiz abgeschlossen",
+      "finalScore": "Endpunktzahl",
+      "percent": "Prozentsatz: ",
+      "imgQuestion": "Welches Bild zeigt diesen Akkord?",
+      "notesQuestion": "Welche Töne gehören zu diesem Akkord?",
+      "score": "Punktzahl: ",
+      "next": "Nächste",
+      "restart": "Quiz neu starten",
+      "quit": "Quiz beenden",
+      "correct": "Richtig!",
+      "incorrect": "Falsch!"
+    },
+    "profile": {
+      "title": "Profil",
+      "subtitle": "Hier können Sie Ihr Konto verwalten",
+      "statistics": "Statistiken",
+      "bestScore": "Bester Punktestand:",
+      "accountSettings": "Kontoeinstellungen",
+      "changeAvatar": "Avatar ändern",
+      "uploadHint": "Bild hierher ziehen oder klicken, um auszuwählen",
+      "supportedFormats": "Unterstützte Formate: JPG, PNG, GIF",
+      "save": "Speichern",
+      "changePassword": "Passwort ändern",
+      "currentPassword": "Aktuelles Passwort",
+      "newPassword": "Neues Passwort",
+      "confirmPassword": "Neues Passwort bestätigen",
+      "copyright": "&copy; 2025 Guitar Guide. Alle Rechte vorbehalten."
     }
   }
 }

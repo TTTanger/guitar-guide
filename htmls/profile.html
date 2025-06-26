@@ -10,6 +10,7 @@
     <link href="../styles/profile.css" rel="stylesheet">
     <script src="../scripts/auth.js" defer></script>
     <script src="../scripts/profile.js" defer></script>
+    <script src="../scripts/functions.js" defer></script>
     <script src="../scripts/logout.js" defer></script>
 </head>
 
@@ -24,11 +25,19 @@
         </div>
         <div class="container">
             <div id="branding">
-                <h1>Profile</h1>
-                <p>Here you can manage your account</p>
+                <h1 data-translate="profile.title">Profile</h1>
+                <p data-translate="profile.subtitle">Here you can manage your account</p>
             </div>
         </div>
     </header>
+
+    <aside>
+        <button id="fontInc">Font+</button>
+        <button id="fontDec">Font-</button>
+        <button id="cn">中文</button>
+        <button id="en">EN</button>
+        <button id="de">DE</button>
+    </aside>
 
     <nav>
         <ul>
@@ -51,41 +60,44 @@
 
         <section class="profile-content">
             <div class="profile-stats">
-                <h3>Statistics</h3>
+                <h3 data-translate="profile.statistics">Statistics</h3>
                 <ul>
-                    <li>Best Score: <span id="best-score"></span></li>
+                    <li>
+                        <span data-translate="profile.bestScore">Best Score: </span>
+                        <span id="best-score"></span>
+                    </li>
                 </ul>
             </div>
 
             <div class="profile-settings">
-                <h3>Account Settings</h3>
+                <h3 data-translate="profile.accountSettings">Account Settings</h3>
                 <form id="profile-form">
                     <div class="form-group">
-                        <label for="change-avatar">Change Avatar</label>
+                        <label for="change-avatar" data-translate="profile.changeAvatar">Change Avatar</label>
                         <div class="file-upload-container" id="upload-container">
                             <input type="file" id="avatar-input" accept="image/*">
                             <div class="file-upload-content">
                                 <i class="fas fa-cloud-upload-alt"></i>
-                                <p>Drag and drop an image here or click to select</p>
-                                <span class="file-hint">Supported formats: JPG, PNG, GIF</span>
+                                <p data-translate="profile.uploadHint">Drag and drop an image here or click to select</p>
+                                <span class="file-hint" data-translate="profile.supportedFormats">Supported formats: JPG, PNG, GIF</span>
                             </div>
                         </div>
-                        <button type="button" id="save-avatar">Save</button>
+                        <button type="button" id="save-avatar" data-translate="profile.save">Save</button>
                     </div>
 
                     <div class="form-group">
-                        <label for="change-password">Change Password</label>
-                        <input type="password" id="current-password" placeholder="Current Password">
-                        <input type="password" id="new-password" placeholder="New Password">
-                        <input type="password" id="confirm-password" placeholder="Confirm New Password">
-                        <button type="button" id="save-password">Save</button>
+                        <label for="change-password" data-translate="profile.changePassword">Change Password</label>
+                        <input type="password" id="current-password" placeholder="Current Password" data-translate-placeholder="profile.currentPassword">
+                        <input type="password" id="new-password" placeholder="New Password" data-translate-placeholder="profile.newPassword">
+                        <input type="password" id="confirm-password" placeholder="Confirm New Password" data-translate-placeholder="profile.confirmPassword">
+                        <button type="button" id="save-password" data-translate="profile.save">Save</button>
                     </div>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer>&copy; 2025 Guitar Guide. All rights reserved.</footer>
+    <footer data-translate="profile.copyright">&copy; 2025 Guitar Guide. All rights reserved.</footer>
 </body>
 
 </html>
