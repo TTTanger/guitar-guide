@@ -1,0 +1,578 @@
+
+@media (min-width: 1200px) {
+    main {
+        margin-left: 300px;
+        margin-right: 300px;
+    }
+}
+
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    main {
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+    
+    nav {
+        width: 180px;
+    }
+    
+    aside {
+        width: 180px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    header {
+        height: 70px;
+        padding: 10px 0;
+    }
+    
+    .brand {
+        margin: 0 0 0 5px;
+    }
+    
+    #title {
+        font-size: 1.1rem;
+    }
+    
+    #subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .user-controls {
+        top: 5px;
+        right: 10px;
+        gap: 10px;
+        padding: 3px 10px;
+    }
+    
+    #user-avatar {
+        width: 28px;
+        height: 28px;
+    }
+    
+    #user-info {
+        font-size: 0.8em;
+    }
+    
+    #logout {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+
+    nav {
+        position: fixed;
+        top: 70px;
+        left: -200px; 
+        width: 200px;
+        height: calc(100vh - 70px);
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+    
+    nav.show {
+        left: 0;
+    }
+    
+
+    aside {
+        position: fixed;
+        top: 70px;
+        right: -200px; 
+        width: 200px;
+        height: calc(100vh - 70px);
+        transition: right 0.3s ease;
+        z-index: 999;
+    }
+    
+    aside.show {
+        right: 0;
+    }
+    
+    main {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 70px;
+        padding: 15px;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        position: fixed;
+        top: 70px;
+        left: 15px;
+        z-index: 1001;
+        background: #e8491d;
+        border: none;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1.2rem;
+    }
+    
+    .mobile-menu-toggle:hover {
+        background: #c0392b;
+    }
+    
+    .mobile-sidebar-toggle {
+        display: block;
+        position: fixed;
+        top: 70px;
+        right: 15px;
+        z-index: 1001;
+        background: #35424a;
+        border: none;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1.2rem;
+    }
+    
+    .mobile-sidebar-toggle:hover {
+        background: #2c373d;
+    }
+    
+    .mobile-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+    }
+    
+    .mobile-overlay.show {
+        display: block;
+    }
+    
+    .content-card {
+        padding: 1rem;
+        margin: 0.8rem 0;
+    }
+    
+    .img-container {
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+        min-height: 100px;
+    }
+    
+    .main-title {
+        font-size: 1.3rem;
+        margin: 1rem 0 0.5rem 0;
+    }
+    
+    .primary-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+    
+    footer {
+        height: 8vh;
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    header {
+        height: 60px;
+        padding: 8px 0;
+    }
+    
+    .brand {
+        margin: 0 0 0 3px;
+    }
+    
+    #title {
+        font-size: 1rem;
+    }
+    
+    #subtitle {
+        font-size: 0.7rem;
+    }
+    
+    .user-controls {
+        top: 3px;
+        right: 5px;
+        gap: 8px;
+        padding: 2px 8px;
+    }
+    
+    #user-avatar {
+        width: 24px;
+        height: 24px;
+    }
+    
+    #user-info {
+        font-size: 0.7em;
+    }
+    
+    #logout {
+        padding: 0.2rem 0.6rem;
+        font-size: 0.7rem;
+    }
+    
+
+    nav, aside {
+        width: 180px;
+        top: 60px;
+        height: calc(100vh - 60px);
+    }
+    
+    nav {
+        left: -180px;
+    }
+    
+    aside {
+        right: -180px;
+    }
+    
+
+    main {
+        margin-top: 60px;
+        padding: 10px;
+    }
+    
+
+    .mobile-menu-toggle {
+        top: 12px;
+        left: 12px;
+        padding: 6px 10px;
+        font-size: 1rem;
+    }
+    
+    .mobile-sidebar-toggle {
+        top: 12px;
+        right: 12px;
+        padding: 6px 10px;
+        font-size: 1rem;
+    }
+    
+    .content-card {
+        padding: 0.8rem;
+        margin: 0.6rem 0;
+    }
+    
+    .img-container {
+        padding: 0.3rem;
+        margin: 0.3rem 0;
+        min-height: 80px;
+    }
+    
+    .main-title {
+        font-size: 1.2rem;
+        margin: 0.8rem 0 0.4rem 0;
+    }
+    
+    .primary-btn {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+    
+    footer {
+        height: 6vh;
+        font-size: 0.8rem;
+    }
+}
+
+
+@media (max-width: 320px) {
+    header {
+        height: 55px;
+        padding: 6px 0;
+    }
+    
+    .brand {
+        margin: 0 0 0 2px;
+    }
+    
+    #title {
+        font-size: 0.9rem;
+    }
+    
+    #subtitle {
+        font-size: 0.6rem;
+    }
+    
+    .user-controls {
+        top: 2px;
+        right: 3px;
+        gap: 6px;
+        padding: 1px 6px;
+    }
+    
+    #user-avatar {
+        width: 22px;
+        height: 22px;
+    }
+    
+    #user-info {
+        font-size: 0.6em;
+    }
+    
+    #logout {
+        padding: 0.15rem 0.5rem;
+        font-size: 0.6rem;
+    }
+    
+
+    nav, aside {
+        width: 160px;
+        top: 55px;
+        height: calc(100vh - 55px);
+    }
+    
+    nav {
+        left: -160px;
+    }
+    
+    aside {
+        right: -160px;
+    }
+    
+
+    main {
+        margin-top: 55px;
+        padding: 8px;
+    }
+    
+
+    .mobile-menu-toggle {
+        top: 10px;
+        left: 10px;
+        padding: 5px 8px;
+        font-size: 0.9rem;
+    }
+    
+    .mobile-sidebar-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 5px 8px;
+        font-size: 0.9rem;
+    }
+    
+
+    .content-card {
+        padding: 0.6rem;
+        margin: 0.5rem 0;
+    }
+    
+
+    .img-container {
+        padding: 0.2rem;
+        margin: 0.2rem 0;
+        min-height: 60px;
+    }
+    
+    .main-title {
+        font-size: 1.1rem;
+        margin: 0.6rem 0 0.3rem 0;
+    }
+    
+    .primary-btn {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+    
+    footer {
+        height: 5vh;
+        font-size: 0.7rem;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .mobile-menu-toggle,
+    .mobile-sidebar-toggle,
+    .mobile-overlay {
+        display: none !important;
+    }
+}
+
+
+@media (max-width: 767px) {
+    nav:not(.show),
+    aside:not(.show) {
+        display: none;
+    }
+}
+
+
+@media (max-width: 767px) {
+    #img-container-chord {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #img-note {
+        max-width: 100%;
+        max-height: 300px;
+        width: auto;
+    }
+    
+    #img-chord {
+        max-width: 100%;
+        max-height: 250px;
+        width: auto;
+    }
+    
+    .pagination-controls {
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 16px 0;
+    }
+    
+    .chord-card {
+        margin-bottom: 20px;
+    }
+    
+    .chord-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .chord-card p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 480px) {
+    #img-container-chord {
+        gap: 8px;
+    }
+    
+    #img-note {
+        max-height: 250px;
+    }
+    
+    #img-chord {
+        max-height: 200px;
+    }
+    
+    .chord-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .chord-card p {
+        font-size: 0.85rem;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .login-container,
+    .register-container {
+        padding: 0 10px;
+        margin: 10px auto;
+    }
+    
+    form {
+        padding: 1.2rem;
+    }
+    
+    .login-header h1,
+    .register-header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .login-header p,
+    .register-header p {
+        font-size: 0.9rem;
+    }
+    
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+        padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .login-button,
+    .register-button {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .quiz-container {
+        padding: 10px;
+    }
+    
+    .question-card {
+        padding: 1rem;
+        margin: 0.5rem 0;
+    }
+    
+    .options-container {
+        gap: 8px;
+    }
+    
+    .option-btn {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .quiz-controls {
+        gap: 10px;
+        margin: 15px 0;
+    }
+    
+    .quiz-controls button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .profile-container {
+        padding: 10px;
+    }
+    
+    .profile-card {
+        padding: 1rem;
+        margin: 0.5rem 0;
+    }
+    
+    .profile-avatar img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .profile-info {
+        gap: 8px;
+    }
+    
+    .profile-info label {
+        font-size: 0.9rem;
+    }
+    
+    .profile-info input {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .profile-actions {
+        gap: 10px;
+        margin: 15px 0;
+    }
+    
+    .profile-actions button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+} 
