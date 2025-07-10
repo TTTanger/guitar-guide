@@ -1,0 +1,23 @@
+#img-container-chord {
+    width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#img-note {
+    max-width: 400px;
+    max-height: 600px;
+}
+
+#img-chord {
+    width: 300px;
+    height: 400px;
+}
+
+.pagination-controls { 
+    display: flex;
+    justify-content: center;
+    gap: 16px;  
+    margin: 24px 0;          
+}

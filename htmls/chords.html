@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Guitar Chords Tutorial</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="../styles/reset.css" rel="stylesheet" />
+    <link href="../styles/template.css" rel="stylesheet" />
+    <link href="../styles/chords.css" rel="stylesheet" />
+    <script src="../scripts/auth.js" defer></script>
+    <script src="../scripts/chords.js" defer></script>
+    <script src="../scripts/functions.js" defer></script>
+    <script src="../scripts/logout.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="user-controls">
+            <a href="profile.html" class="user-group">
+                <img id="user-avatar" alt="User Avatar" />
+                <span id="user-info"></span>
+            </a>
+            <a href="#" id="logout">Log out</a>
+        </div>
+
+        <div class="brand">
+            <h3 id="title" data-translate="main.title">Guitar Basics Tutorial</h3>
+            <p id="subtitle" data-translate="main.subtitle">Learn, Remember, Practice</p>
+        </div>
+
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-guitar"></i>Basics</a></li>
+            <li class="current-nav"><a href="chords.html"><i class="fas fa-music"></i>Chords</a></li>
+            <li><a href="quiz.html"><i class="fas fa-question-circle"></i>Quiz</a></li>
+        </ul>
+    </nav>
+
+    <aside>
+        <button id="fontInc">Font+</button>
+        <button id="fontDec">Font-</button>
+        <button id="cn">中文</button>
+        <button id="en">EN</button>
+        <button id="de">DE</button>
+    </aside>
+
+    <main>
+        <h1 data-translate="chords.title">Basic Guitar Chords</h1>
+        <p data-translate="chords.subtitle">Learn the essential chords that every guitarist should know.</p>
+        <div class="content-card" id="chords-card">
+            <!-- Chord cards will be generated here by JavaScript -->
+        </div>
+
+        <div class="pagination-controls">
+            <button id="prev-btn" class="primary-btn" disabled>Previous</button>
+            <span class="page-info">Page <span id="current-page">1</span> of <span id="total-pages">1</span></span>
+            <button id="next-btn" class="primary-btn">Next</button>
+        </div>
+    </main>
+    <footer data-translate="main.copyright"></footer>
+</body>
+
+</html>

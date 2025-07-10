@@ -1,0 +1,188 @@
+{
+  "en": {
+    "main": {
+      "title": "Guitar Basics Tutorial",
+      "subtitle": "Learn, Remember, Practice",
+      "copyright": "© 2026 Guitar Guide. All rights reserved."
+    },
+    "basics": {
+      "title": "Getting Started with Guitar",
+      "subtitle": "Welcome to your guitar journey! This guide will help you learn the fundamental chords and techniques.",
+      "understanding": "Understanding the Guitar",
+      "guitarStructure": "The guitar is a versatile and iconic musical instrument with six strings, played by strumming or plucking. It's used in various music genres like rock, jazz, blues, and classical. Guitars come in two main types: acoustic, which produces sound naturally, and electric, which requires an amplifier. Learning the guitar starts with understanding its parts—body, neck, strings, and frets—and practicing basic chords like C, G, and D. It's a great instrument for beginners and experts alike, offering endless possibilities for creativity and expression.",
+      "tuning1": "Tuning a guitar is the process of adjusting the tension of its strings to achieve the correct pitch. The standard tuning for a six-string guitar, from the thickest to the thinnest string, is E, A, D, G, B, and E. You can use a tuner, a tuning app, or tune by ear using a reference pitch like a piano or another instrument.",
+      "tuning2": "Each string corresponds to a tuning peg on the headstock. Turn the peg clockwise to tighten and raise the pitch or counterclockwise to loosen and lower the pitch. It's important to tune each string carefully to avoid over-tightening, which may cause it to snap. Regular tuning ensures your guitar sounds its best!",
+      "fingerboard": "Finger Board Introduction",
+      "fingerboard1": "The fingerboard, or fretboard, is the part of the guitar neck where you press down on the strings to create different notes and chords. It consists of frets, which are metal strips that divide the neck into sections. Each fret represents a half-step in pitch. By pressing a string down behind a fret, you shorten its vibrating length, raising the pitch. The fingerboard is essential for playing melodies and chords, and mastering it is key to becoming a proficient guitarist.",
+      "fingerboard2": "To play a note, press down on the string with your finger just behind the fret. This creates a clear sound. Use your fingertips to avoid muting adjacent strings. Practice moving between frets and strings to build dexterity."
+    },
+    "chords": {
+      "title": "Basic Guitar Chords",
+      "subtitle": "Chords of C",
+      "C": "The C chord is one of the most fundamental chords. It is composed with C, E, G. Place your fingers as shown in the diagram.",
+      "Dm": "The Dm chord is a minor chord. It is composed with D, F, A. Place your fingers as shown in the diagram.",
+      "Em": "The Em chord is a minor chord. It is composed with E, G, B. Place your fingers as shown in the diagram.",
+      "F": "The F chord is a major chord. It is composed with F, A, C. Place your fingers as shown in the diagram.",
+      "G": "The G chord is a major chord. It is composed with G, B, D. Place your fingers as shown in the diagram.",
+      "Am": "The A chord is a major chord. It is composed with A, C, E. Place your fingers as shown in the diagram."
+    },
+    "quiz": {
+      "title": "Test Your Chord Knowledge",
+      "question-count": "Number of Questions:",
+      "start-quiz": "Start Quiz",
+      "completion": "You have completed the quiz",
+      "showResult":"Show Result",
+      "finalScore": "Final Score: ",
+      "percent": "Percentage: ",
+      "imgQuestion": "Which picture shows this chord?",
+      "notesQuestion": "Which notes make up this chord?",
+      "next": "Next",
+      "restart": "Restart Quiz",
+      "quit": "Quit Quiz",
+      "correct": "Correct!",
+      "score": "Score: ",
+      "incorrect": "Incorrect!"
+    },
+    "profile": {
+      "title": "Profile",
+      "subtitle": "Here you can manage your account",
+      "statistics": "Statistics",
+      "bestScore": "Best Score:",
+      "since": "Joined since:",
+      "accountSettings": "Account Settings",
+      "changeAvatar": "Change Avatar",
+      "uploadHint": "Drag and drop an image here or click to select",
+      "uploading": "Uploading...",
+      "supportedFormats": "Supported formats: JPG, PNG, GIF",
+      "save": "Save",
+      "changePassword": "Change Password",
+      "currentPassword": "Current Password",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm New Password"
+    }
+  },
+  "zh": {
+    "main": {
+      "title": "吉他基础教程",
+      "subtitle": "学习，记忆，练习",
+      "copyright": "© 2026 吉他指南. 保留所有权利。"
+    },
+    "basics": {
+      "title": "开始学习吉他",
+      "subtitle": "欢迎开始您的吉他之旅！本指南将帮助您学习基础和弦和技巧。",
+      "understanding": "认识吉他",
+      "guitarStructure": "吉他是一种多才多艺且具有标志性的乐器，拥有六根弦，可以用拨片弹奏或用手指拨动。它被广泛应用于摇滚、爵士、蓝调和古典等音乐流派。吉他主要分为两种类型：原声吉他（自然发声）和电吉他（需连接音箱）。学习吉他首先要了解它的结构——琴体、琴颈、琴弦和品格，并练习基本和弦，如C、G和D。无论是初学者还是高手，吉他都是一个富有表现力和创意的绝佳乐器。",
+      "tuning1": "调音是通过调节琴弦的张力来达到正确音高的过程。标准六弦吉他的调音从最粗到最细(6弦到1弦)分别为E、A、D、G、B、E。你可以使用调音器、调音App，或者通过钢琴等参考音来凭耳调音。",
+      "tuning2": "每根琴弦对应琴头上的一个调音钮。顺时针旋转可以增加张力、升高音高；逆时针旋转则会降低张力、降低音高。务必小心调音，以免过度紧绷导致琴弦断裂。经常调音能保证你的吉他始终保持最佳音效！",
+      "fingerboard": "指板介绍",
+      "fingerboard1": "指板（又称品板）位于吉他琴颈上，是你按弦以产生不同音符和和弦的地方。指板由金属品丝划分为若干小段，每一品代表一个半音。当你将琴弦按在某一品位之后，振动长度就会缩短，音高随之升高。指板在演奏旋律与和弦中非常关键，掌握它是成为熟练吉他手的重要一步。在这里，我们不会谈论过多关于指板的细节，因为它们会随着你弹奏的熟练程度而逐渐显现，死记硬背指板上的音是没有任何意义的，因为音乐是一种感觉，而不是单纯的死记硬背。如果你对记忆指板有兴趣，请参考其他资料，但请记住，真正的音乐家是那些能够通过感觉来弹奏吉他的音乐家。",
+      "fingerboard2": "要弹奏一个音符，用手指在品丝后方按压琴弦，这样能产生清晰的声音。在练习初期，你可以在靠近品丝处按弦，这样可以使你更加省力。用指尖按弦可以避免无意间压到相邻弦，这一点非常重要，如果不注意这一点拨弦时就像弹棉花一样。按和弦的顺序最好从靠近你的一侧（根音所在弦）开始按弦，这种按弦顺序会使你的演奏更加流畅。"
+    },
+    "chords": {
+      "title": "基础吉他和弦",
+      "subtitle":"C调和弦",
+      "C": "C和弦是最基本的和弦之一，是我们学习和弦知识的基础，它由C、E、G三个音组成，由于三个音之间是大三度加大三度的关系，被称为大三和弦。食指放于二弦一品，中指放于四弦二品，无名指放于五弦三品，请按照图示摆放手指。",
+      "Dm": "Dm和弦由D、F、A三个音组成，三个音之间的关系是小三度加大三度，因此我们称其为小三和弦。食指放于一弦一品，中指放于三弦二品，无名指放于三弦二品，请按照图示摆放手指。",
+      "Em": "Em和弦是一个小三和弦，它由E、G、B三个音组成。中指放于四弦二品，无名指指放于五弦二品，请按照图示摆放手指。",
+      "F": "F和弦是一个大三和弦，它由F、A、C三个音组成。这个和弦有两种按法，一种是大横按按法，另一种是小横按按法，初学者最好从小横按按法开始学起。食指同时按住二弦一品和一弦一品，中指放于二弦二品，无名指放于三弦三品，请按照图示摆放手指。",
+      "G": "G和弦是一个大三和弦，它是C调和弦中的属和弦。由G、B、D三个音组成。请按照图示摆放手指。",
+      "Am": "A和弦是一个大三和弦。它由A、C、E三个音组成。请按照图示摆放手指。"
+    },
+    "quiz": {
+      "title": "和弦知识小测验",
+      "question-count": "题目数量：",
+      "start-quiz": "开始测验",
+      "completion": "你已完成测验",
+      "showResult": "显示结果",
+      "score": "分数：",
+      "finalScore": "最终得分：",
+      "percent": "正确率：",
+      "imgQuestion": "下列哪张图片是该和弦？",
+      "notesQuestion": "该和弦由哪些音组成？",
+      "next": "下一题",
+      "restart": "重新开始",
+      "quit": "退出测验",
+      "correct": "回答正确！",
+      "incorrect": "回答错误!"
+    },
+    "profile": {
+      "title": "个人资料",
+      "subtitle": "您可以在这里管理您的账户",
+      "statistics": "统计信息",
+      "bestScore": "最高分：",
+      "accountSettings": "账户设置",
+      "since": "加入时间：",
+      "changeAvatar": "更换头像",
+      "uploadHint": "拖拽图片到此处或点击选择",
+      "uploading": "上传中...",
+      "supportedFormats": "支持格式：JPG, PNG, GIF",
+      "save": "保存",
+      "changePassword": "修改密码",
+      "currentPassword": "当前密码",
+      "newPassword": "新密码",
+      "confirmPassword": "确认新密码"
+    }
+  },
+  "de": {
+    "main": {
+      "title": "Gitarren Grundlagen Tutorial",
+      "subtitle": "Lernen, Merken, Üben",
+      "copyright": "© 2026 Guitar Guide. Alle Rechte vorbehalten."
+    },
+    "basics": {
+      "title": "Erste Schritte mit der Gitarre",
+      "subtitle": "Willkommen auf deiner Gitarrenreise! Dieser Leitfaden hilft dir, die grundlegenden Akkorde und Techniken zu lernen.",
+      "understanding": "Die Gitarre verstehen",
+      "guitarStructure": "Die Gitarre ist ein vielseitiges und ikonisches Musikinstrument mit sechs Saiten, das durch Anschlagen oder Zupfen gespielt wird. Sie wird in verschiedenen Musikrichtungen wie Rock, Jazz, Blues und Klassik verwendet. Es gibt zwei Haupttypen von Gitarren: Akustikgitarren, die den Klang natürlich erzeugen, und E-Gitarren, die einen Verstärker benötigen. Der Einstieg ins Gitarrenspiel beginnt mit dem Verständnis ihrer Bestandteile – Korpus, Hals, Saiten und Bünde – und dem Üben grundlegender Akkorde wie C, G und D. Die Gitarre ist sowohl für Anfänger als auch für Fortgeschrittene ideal und bietet unzählige Möglichkeiten für Kreativität und Ausdruck.",
+      "tuning1": "Das Stimmen einer Gitarre bedeutet, die Spannung der Saiten so einzustellen, dass der richtige Ton entsteht. Die Standardstimmung einer sechssaitigen Gitarre – von der dicksten bis zur dünnsten Saite – ist E, A, D, G, B und E. Du kannst ein Stimmgerät, eine Stimm-App oder dein Gehör mit einem Referenzton wie einem Klavier verwenden.",
+      "tuning2": "Jede Saite ist mit einem Stimmwirbel am Kopf der Gitarre verbunden. Drehe den Wirbel im Uhrzeigersinn, um die Spannung und damit die Tonhöhe zu erhöhen, oder gegen den Uhrzeigersinn, um sie zu senken. Achte darauf, jede Saite vorsichtig zu stimmen, um ein Reißen zu vermeiden. Regelmäßiges Stimmen sorgt dafür, dass deine Gitarre immer gut klingt!",
+      "fingerboard": "Einführung in das Griffbrett",
+      "fingerboard1": "Das Griffbrett ist der Teil des Gitarrenhalses, auf dem man die Saiten herunterdrückt, um verschiedene Töne und Akkorde zu erzeugen. Es besteht aus Bünden – kleinen Metallstreifen – die den Hals in Abschnitte unterteilen. Jeder Bund steht für einen Halbton. Wenn du eine Saite hinter einem Bund drückst, verkürzt du ihre schwingende Länge und erhöhst die Tonhöhe. Das Griffbrett ist entscheidend für das Spielen von Melodien und Akkorden – seine Beherrschung ist der Schlüssel zum Können auf der Gitarre.",
+      "fingerboard2": "Um einen Ton zu spielen, drücke die Saite mit deinem Finger direkt hinter dem Bund nieder. So entsteht ein klarer Ton. Benutze deine Fingerspitzen, um benachbarte Saiten nicht versehentlich zu dämpfen. Übe den Wechsel zwischen Bünden und Saiten, um deine Fingerfertigkeit zu verbessern."
+    },
+    "chords": {
+      "title": "Grundlegende Gitarrenakkorde",
+      "subtitle":"Akkord von C",
+      "C": "Der C-Akkord ist einer der grundlegendsten Akkorde. Er besteht aus den Tönen C, E und G. Platziere deine Finger wie im Diagramm gezeigt.",
+      "Dm": "Der Dm-Akkord ist ein Moll-Akkord. Er besteht aus den Tönen D, F und A. Platziere deine Finger wie im Diagramm gezeigt.",
+      "Em": "Der Em-Akkord ist ein Moll-Akkord. Er besteht aus den Tönen E, G und B. Platziere deine Finger wie im Diagramm gezeigt.",
+      "F": "Der F-Akkord ist ein Dur-Akkord. Er besteht aus den Tönen F, A und C. Platziere deine Finger wie im Diagramm gezeigt.",
+      "G": "Der G-Akkord ist ein Dur-Akkord. Er besteht aus den Tönen G, B und D. Platziere deine Finger wie im Diagramm gezeigt.",
+      "Am": "Der A-Akkord ist ein Dur-Akkord. Er besteht aus den Tönen A, C und E. Platziere deine Finger wie im Diagramm gezeigt."
+    },
+    "quiz": {
+      "title": "Teste dein Akkordwissen",
+      "question-count": "Anzahl der Fragen:",
+      "start-quiz": "Quiz starten",
+      "showResult": "Ergebnis anzeigen",
+      "completion": "Du hast das Quiz abgeschlossen",
+      "finalScore": "Endpunktzahl: ",
+      "percent": "Prozentsatz: ",
+      "imgQuestion": "Welches Bild zeigt diesen Akkord?",
+      "notesQuestion": "Welche Töne gehören zu diesem Akkord?",
+      "score": "Punktzahl: ",
+      "next": "Nächste",
+      "restart": "Quiz neu starten",
+      "quit": "Quiz beenden",
+      "correct": "Richtig!",
+      "incorrect": "Falsch!"
+    },
+    "profile": {
+      "title": "Profil",
+      "subtitle": "Hier können Sie Ihr Konto verwalten",
+      "statistics": "Statistiken",
+      "bestScore": "Bester Punktestand:",
+      "since": "Beitrittsdatum:",
+      "accountSettings": "Kontoeinstellungen",
+      "changeAvatar": "Avatar ändern",
+      "uploadHint": "Bild hierher ziehen oder klicken, um auszuwählen",
+      "uploading": "Lädt hoch...",
+      "supportedFormats": "Unterstützte Formate: JPG, PNG, GIF",
+      "save": "Speichern",
+      "changePassword": "Passwort ändern",
+      "currentPassword": "Aktuelles Passwort",
+      "newPassword": "Neues Passwort",
+      "confirmPassword": "Neues Passwort bestätigen"
+    }
+  }
+}

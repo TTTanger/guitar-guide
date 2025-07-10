@@ -1,0 +1,34 @@
+{
+    "chords": [
+        {
+            "name": "C",
+            "noteImage": "../images/C_example.jpg",
+            "chordImage": "../images/C_chord.svg"
+        },
+        {
+            "name": "Dm",
+            "noteImage": "../images/Dm_example.jpg",
+            "chordImage": "../images/Dm_chord.svg"
+        },
+        {
+            "name": "Em",
+            "noteImage": "../images/Em_example.jpg",
+            "chordImage": "../images/Em_chord.svg"
+        },
+        {
+            "name": "F",
+            "noteImage": "../images/F_example.jpg",
+            "chordImage": "../images/F_chord.svg"
+        },
+        {
+            "name": "G",
+            "noteImage": "../images/G_example.jpg",
+            "chordImage": "../images/G_chord.svg"
+        },
+        {
+            "name": "Am",
+            "noteImage": "../images/Am_example.jpg",
+            "chordImage": "../images/Am_chord.svg"
+        }
+    ]
+}
