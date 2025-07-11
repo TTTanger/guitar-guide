@@ -1,5 +1,4 @@
 // Encrypts a password using a simple Vigenère cipher variant
-// Note: This is for demonstration only and is NOT secure for real-world use
 // Reference: https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher
 
 /**

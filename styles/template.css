@@ -218,6 +218,7 @@ aside {
     padding: 1.5rem 2rem;
     margin: 1.2rem 0;
     transition: box-shadow 0.2s;
+    overflow: auto;
 }
 
 /* 1.1.7 Image Container */
@@ -235,12 +236,10 @@ aside {
     overflow: hidden;
 }
 .img-container img {
-    object-fit: cover;
     border-radius: 6px;
     box-shadow: 0 1px 6px rgba(0,0,0,0.08);
     width: 100%;
-    height: 100%;
-    object-fit: contain;      
+    height: 100%;   
     display: block;
 }
 

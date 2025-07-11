@@ -1,18 +1,24 @@
 #img-container-chord {
-    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px; 
     height: 100%;
     margin: 0 auto;
-    overflow: hidden;
+    position: relative;
 }
 
 #img-note {
-    max-width: 400px;
-    max-height: 600px;
+    width: 50%;
+    height: 50%;
+    aspect-ratio: 4/3; /* 4:3 aspect ratio */
+    object-fit: contain;
 }
 
 #img-chord {
-    width: 300px;
-    height: 400px;
+    width: 25%;
+    height: 25%;
+    aspect-ratio: 2/3;
 }
 
 .pagination-controls { 
@@ -21,3 +27,60 @@
     gap: 16px;  
     margin: 24px 0;          
 }
+
+/*`img-chord`图片是SVG格式，放进网页后会有“容器效果”，这其实是SVG图片的一个常见特性。原因如下：
+
+### 1. SVG本身就是矢量容器
+SVG（Scalable Vector Graphics）本质上是一个可缩放的矢量图形容器。它不像JPG/PNG那样只有像素内容，SVG文件内部有自己的宽高（width/height或viewBox），浏览器会把SVG当作一个“盒子”渲染。
+
+### 2. CSS宽高和SVG的viewBox关系
+你在CSS里设置了：
+```css
+#img-chord {
+    width: 10%;
+    height: 100%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+}
+```
+- 这会让SVG图片在父容器中占据10%宽度，高度100%（通常是父容器的高度）。
+- `aspect-ratio: 4/3`和`object-fit: contain`会让SVG保持比例缩放，但不会超出容器。
+- 如果SVG本身有空白边界（viewBox比实际内容大），就会看起来像“有容器效果”或有留白。
+
+### 3. 容器效果的常见原因
+- **SVG文件本身的viewBox设置过大**，导致内容在SVG内部居中或有空白。
+- **CSS设置的宽高和SVG实际内容比例不一致**，导致SVG缩放后有空白。
+- **object-fit: contain**会让图片完整显示，但如果比例不一致，四周会有空白。
+
+---
+
+## 解决方法
+
+1. **检查SVG文件的viewBox和内容边界**  
+   用文本编辑器打开SVG，确认viewBox和实际内容大小一致。
+
+2. **调整CSS样式**  
+   如果你想让SVG填满容器且无空白，可以尝试：
+   ```css
+   #img-chord {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;  // 填满容器，可能会裁剪
+       display: block;
+   }
+   ```
+   如果要完整显示且不裁剪，继续用`object-fit: contain`，但要接受有空白。
+
+3. **父容器设置**
+   确保父容器（#img-container-chord）有合适的宽高，否则SVG会继承父容器的尺寸。
+
+---
+
+### 总结（中文）
+
+SVG图片有“容器效果”通常是因为SVG的viewBox设置、CSS的object-fit和容器尺寸共同作用的结果。如果你想让SVG没有多余空白，建议：
+- 检查SVG文件的viewBox是否紧贴内容；
+- 用object-fit: cover让其填满容器（但可能会裁剪）；
+- 或者接受object-fit: contain带来的留白。
+
+*/
