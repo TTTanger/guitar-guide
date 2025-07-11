@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="../styles/login.css">
-    <link rel="stylesheet" href="../styles/responsive.css">
-    <script type="module" src="../scripts/login.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Guitar Guide</title>
-</head>
-<body>
-    <div class="login-container">
-        <div class="login-header">
-            <i class="fas fa-guitar"></i>
-            <h1>Welcome Back</h1>
-            <p>Sign in to continue to Guitar Guide</p>
-        </div>
-        
-        <div id="error-message"></div>
-        
-        <form action="../phps/login.php" method="post">
-            <div class="input-group">
-                <div class="input-field">
-                    <i class="fas fa-user"></i>
-                    <input type="text" name="username" required placeholder="Username">
-                </div>    
-                
-                <div class="input-field">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" name="password" required placeholder="Password">
-                </div>
-            </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login - Guitar Guide</title>
 
-            <button type="submit" class="login-button">
-                <span>Sign In</span>
-                <i class="fas fa-arrow-right"></i>
-            </button>
-            
-            <div class="register-link">
-                <span>Don't have an account?</span>
-                <a href="register.html">Register here</a>
+        <script src="https://cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+        <script type="module" src="../scripts/login.js" defer></script>
+
+        <link rel="stylesheet" href="../styles/login.css">
+        <link rel="stylesheet" href="../styles/responsive.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body>
+        <div class="login-container">
+            <div class="login-header">
+                <i class="fas fa-guitar"></i>
+                <h1>Welcome Back</h1>
+                <p>Let's Get You Back In</p>
             </div>
-        </form>
-    </div>
-</body>
+            
+            <form action="../phps/login.php" method="post">
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="username" required placeholder="Username">
+                    </div>    
+                    
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="password" required placeholder="Password">
+                    </div>
+                </div>
+
+                <button type="submit" class="login-button">
+                    <span>Sign In</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                
+                <div id="error-message"></div>
+
+                <div class="register-link">
+                    <span>Don't have an account?</span>
+                    <a href="register.html">Register here</a>
+                </div>
+            </form>
+        </div>
+    </body>
 </html>

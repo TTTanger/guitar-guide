@@ -1,6 +1,5 @@
 <?php
 // Decrypts a password using a simple Vigenère cipher variant
-// Note: This is for demonstration only and is NOT secure for real-world use
 // Reference: https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher
 
 /**
@@ -11,15 +10,15 @@
  * @param string $encrypted_psw The encrypted password string
  * @return string The decrypted (plain text) password
  */
-function decrypt_password($encrypted_psw) {
-    $key = "tanger"; // Static key for decryption (must match encryption key)
-    $encrypted_len = strlen($encrypted_psw); // Length of the encrypted password
+function decrypt($encrypted, $time) {
+    $key = md5($time); // Get the key from the time
+    $encrypted_len = strlen($encrypted); // Length of the encrypted password
     $key_len = strlen($key); // Length of the key
     $decrypted = '';
 
     // Loop through each character of the encrypted password
     for ($i = 0; $i < $encrypted_len; $i++) {
-        $c_char = $encrypted_psw[$i]; // Current character from the encrypted password
+        $c_char = $encrypted[$i]; // Current character from the encrypted password
         $k_char = $key[$i % $key_len]; // Corresponding character from the key (repeats if needed)
 
         // Convert characters to offsets (printable ASCII range)

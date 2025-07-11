@@ -1,6 +1,9 @@
 // Wait for the DOM to be fully loaded before running the script
 // This ensures all elements are available for manipulation
 
+import { getFormattedTime } from './utils.js';
+import { encrypt } from './encrypt.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     // Get all the elements needed for the profile page
     const profileAvatar = document.querySelector('.profile-avatar img'); // Main profile avatar image
@@ -55,13 +58,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Prepare form data for the password update request
         const formData = new FormData();
-        formData.append('action', 'updatePassword');
-        formData.append('current_password', currentPassword.value);
-        formData.append('new_password', newPassword.value);
+        const time = getFormattedTime();
+        console.log("Time: ", time);
+        formData.set('action', 'updatePassword');
+        formData.set('time', time);
+        const encryptedCurrentPsw = encrypt(currentPassword.value, time);
+        console.log("Encrypted current password: ", currentPassword.value);
+        console.log("Encrypted current password: ", encryptedCurrentPsw);
+        const encryptedNewPsw = encrypt(newPassword.value, time);
+        console.log("Encrypted new password: ", encryptedNewPsw);
+        formData.set('current_password', encryptedCurrentPsw);
+        formData.set('new_password', encryptedNewPsw);
 
         // Disable the button and show updating status
         uploadPasswordButton.disabled = true;
-        uploadPasswordButton.textContent = 'Updating...';
+        uploadPasswordButton.setAttribute('data-translate', 'profile.uploading');
+        langController.updateContent();
 
         // Send the password update request to the server
         fetch('../phps/profile.php', {
@@ -86,7 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .finally(() => {
             uploadPasswordButton.disabled = false;
-            uploadPasswordButton.textContent = 'Update Password';
+            uploadPasswordButton.setAttribute('data-translate', 'profile.save');
+            langController.updateContent();
         });
     })
 

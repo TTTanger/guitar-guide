@@ -1,4 +1,5 @@
-import { encryptPassword } from "./encrypt.js";
+import { encrypt } from "./encrypt.js";
+import { getFormattedTime } from "./utils.js";
 
 /**
  * Sleep function to simulate a delay.
@@ -22,20 +23,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add a submit event listener to the login form
     loginForm.addEventListener('submit', async function(e) {
         // Prevent the default form submission (which would reload the page)
-        e.preventDefault(); 
+        e.preventDefault();
+
         
-        console.log('Form submitted');
-        
+        const time = getFormattedTime();
+
         // Collect all the data from the form fields
         const formData = new FormData(this);
         const password = formData.get('password');
         // Encrypt the password before sending it to the server
         // (see encrypt.js for the encryption algorithm)
-        const encryptedPassword = encryptPassword(password);
-        formData.set('password', encryptedPassword); // Replace plain password with encrypted one
-        console.log('Encrypted password:', encryptedPassword);
+        const encryptedPassword = encrypt(password, time);
+        formData.set('password', encryptedPassword); 
+        formData.set('time', time);
+
+        const encryptedPswShow = document.createElement('p');
+        encryptedPswShow.textContent = encryptedPassword;
+        loginForm.appendChild(encryptedPswShow);
+
         // Simulate a delay (for user experience or testing)
-        await sleep(5000); // Wait for 5 seconds
+        await sleep(3000); 
         
         try {
             // Send the form data to the server using the fetch API
@@ -53,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 // If login fails, display the error message from the server
                 errorDiv.textContent = data.error;
-                errorDiv.style.color = 'red';
+                errorDiv.classList.add('show');
             }
         } catch (error) {
             // Handle network or server errors

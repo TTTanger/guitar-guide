@@ -7,7 +7,8 @@ require_once "mysql.php";  // Include database connection
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = trim($_POST["username"]); // Get and trim username from POST
     $password = trim($_POST["password"]); // Get and trim password from POST
-    $password = decrypt_password($password); // Decrypt the password (see decrypt.php for algorithm)
+    $time = $_POST['time']; // Get the time from the POST request
+    $password = decrypt($password, $time); // Decrypt the password (see decrypt.php for algorithm)
     
     // Check password length
     if (strlen($password) < 6) {
@@ -35,14 +36,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $stmt->close();
                 $date = date("Y-m-d"); // Current date for account creation
                 $avatar = "../images/default_avatar.jpeg"; // Default avatar path
-                // Hash the password using PHP's password_hash for security
-                $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                 
                 // Insert the new user into the database
                 $sql = "INSERT INTO accounts (user_name, user_password, user_avatar, created_at) VALUES (?, ?, ?, ?)";
                 if($stmt = $conn->prepare($sql)) {
                     
-                    $stmt->bind_param("ssss", $username, $hashed_password, $avatar, $date);
+                    $stmt->bind_param("ssss", $username, $password, $avatar, $date);
                     if($stmt->execute()) {
                         $stmt->store_result();
                         $response["success"] = true;

@@ -7,7 +7,8 @@ require_once "mysql.php";  // Include database connection
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = trim($_POST["username"]); // Get and trim username from POST
     $password = trim($_POST["password"]); // Get and trim password from POST
-    $password = decrypt_password($password); // Decrypt the password (see decrypt.php for algorithm)
+    $time = $_POST["time"];
+    $password = decrypt($password, $time); // Decrypt the password (see decrypt.php for algorithm)
 
     $response = [];
 
@@ -23,8 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if($stmt->num_rows == 1) {
                 $stmt->bind_result($id, $db_username, $db_password);
                 if($stmt->fetch()) {
-                    // Use PHP's password_verify to check the password hash
-                    if(password_verify($password, $db_password)) { 
+                    if($password == $db_password) { 
                         // Set session variables on successful login
                         $_SESSION["loggedin"] = true;
                         $_SESSION["id"] = $id;
