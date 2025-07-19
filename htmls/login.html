@@ -7,44 +7,88 @@
 
         <script src="https://cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
         <script type="module" src="../scripts/login.js" defer></script>
+        <script src="../scripts/slideshow.js" defer></script>
 
         <link rel="stylesheet" href="../styles/login.css">
-        <link rel="stylesheet" href="../styles/responsive.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     </head>
     <body>
-        <div class="login-container">
-            <div class="login-header">
-                <i class="fas fa-guitar"></i>
-                <h1>Welcome Back</h1>
-                <p>Let's Get You Back In</p>
-            </div>
+        <div class="login-wrapper">
             
-            <form action="../phps/login.php" method="post">
-                <div class="input-group">
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" name="username" required placeholder="Username">
-                    </div>    
+            <div class="slideshow-container">
+                <div class="slideshow-wrapper">
+                    <div class="slide active">
+                        <div class="slide-content">
+                            <i class="fas fa-guitar slide-icon"></i>
+                            <h2>Learn Guitar Basics</h2>
+                            <p>Master the fundamentals of guitar playing with our comprehensive tutorials</p>
+                        </div>
+                    </div>
                     
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" name="password" required placeholder="Password">
+                    <div class="slide">
+                        <div class="slide-content">
+                            <i class="fas fa-music slide-icon"></i>
+                            <h2>Practice Chords</h2>
+                            <p>Perfect your chord transitions with interactive exercises and guides</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <div class="slide-content">
+                            <i class="fas fa-trophy slide-icon"></i>
+                            <h2>Test Your Skills</h2>
+                            <p>Challenge yourself with quizzes and track your progress over time</p>
+                        </div>
                     </div>
                 </div>
 
-                <button type="submit" class="login-button">
-                    <span>Sign In</span>
-                    <i class="fas fa-arrow-right"></i>
-                </button>
-                
-                <div id="error-message"></div>
-
-                <div class="register-link">
-                    <span>Don't have an account?</span>
-                    <a href="register.html">Register here</a>
+                <div class="slide-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
                 </div>
-            </form>
+                
+                <button class="slide-control prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slide-control next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <div class="login-container">
+                <div class="login-header">
+                    <i class="fas fa-guitar"></i>
+                    <h1>Welcome Back</h1>
+                    <p>Let's Get You Back In</p>
+                </div>
+                
+                <form action="../phps/login.php" method="post">
+                    <div class="input-group">
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="username" required placeholder="Username">
+                        </div>    
+                        
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" name="password" required placeholder="Password">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="login-button">
+                        <span>Sign In</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    
+                    <div id="error-message"></div>
+
+                    <div class="register-link">
+                        <span>Don't have an account?</span>
+                        <a href="register.html">Register here</a>
+                    </div>
+                </form>
+            </div>
         </div>
     </body>
 </html>

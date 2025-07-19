@@ -19,12 +19,12 @@
     "chords": {
       "title": "Basic Guitar Chords",
       "subtitle": "Chords of C",
-      "C": "The C chord is one of the most fundamental chords. It is composed with C, E, G. Place your fingers as shown in the diagram.",
-      "Dm": "The Dm chord is a minor chord. It is composed with D, F, A. Place your fingers as shown in the diagram.",
-      "Em": "The Em chord is a minor chord. It is composed with E, G, B. Place your fingers as shown in the diagram.",
-      "F": "The F chord is a major chord. It is composed with F, A, C. Place your fingers as shown in the diagram.",
-      "G": "The G chord is a major chord. It is composed with G, B, D. Place your fingers as shown in the diagram.",
-      "Am": "The A chord is a major chord. It is composed with A, C, E. Place your fingers as shown in the diagram."
+      "C": "The C chord is one of the most fundamental chords. It is composed with C, E, G. Place your fingers as shown in the diagram. This chord is the foundation for many songs in the key of C major and is often the first chord beginners learn. The C chord has a bright, open sound and is commonly used in pop, folk, and classical music. Practice transitioning between C and G or F chords to build finger strength and flexibility. For variety, you can try different fingerings or add embellishments like hammer-ons.",
+      "Dm": "The Dm chord is a minor chord. It is composed with D, F, A. Place your fingers as shown in the diagram. Dm has a melancholic, soft sound and is frequently used in ballads and classical pieces. It is a common chord in the key of C major and A minor. Beginners should focus on pressing the strings firmly to avoid buzzing. Try switching between Dm and A or G chords to improve your chord changes. You can also experiment with Dm7 for a jazzier feel.",
+      "Em": "The Em chord is a minor chord. It is composed with E, G, B. Place your fingers as shown in the diagram. Em is one of the easiest chords to play and is widely used in rock, blues, and folk music. Its dark, resonant tone makes it a favorite for both rhythm and lead playing. Practice moving from Em to C or G to develop smooth transitions. You can also try playing Em with different fingerings or as an Em7 for a richer sound.",
+      "F": "The F chord is a major chord. It is composed with F, A, C. Place your fingers as shown in the diagram. The F chord is known for being challenging for beginners due to the barre technique often required. It is essential in many songs, especially in the key of C major. Start with the small barre version before progressing to the full barre chord. Practice slowly and ensure all notes ring clearly. The F chord is used in pop, rock, and classical music.",
+      "G": "The G chord is a major chord. It is composed with G, B, D. Place your fingers as shown in the diagram. G is a versatile chord found in countless songs across genres like country, rock, and folk. Its open, ringing sound makes it a staple for strumming patterns. Practice switching between G and C or D chords to improve your playing. There are several ways to finger the G chord, so try different positions to find what is most comfortable.",
+      "Am": "The A chord is a major chord. It is composed with A, C, E. Place your fingers as shown in the diagram. Am is a minor chord with a warm, somber tone, often used in ballads and classical music. It is closely related to C major and is easy for beginners to learn. Practice moving between Am and E or Dm chords. You can also try Am7 for a softer, jazzier sound."
     },
     "quiz": {
       "title": "Test Your Chord Knowledge",
@@ -81,12 +81,12 @@
     "chords": {
       "title": "基础吉他和弦",
       "subtitle":"C调和弦",
-      "C": "C和弦是最基本的和弦之一，是我们学习和弦知识的基础，它由C、E、G三个音组成，由于三个音之间是大三度加大三度的关系，被称为大三和弦。食指放于二弦一品，中指放于四弦二品，无名指放于五弦三品，请按照图示摆放手指。",
-      "Dm": "Dm和弦由D、F、A三个音组成，三个音之间的关系是小三度加大三度，因此我们称其为小三和弦。食指放于一弦一品，中指放于三弦二品，无名指放于三弦二品，请按照图示摆放手指。",
-      "Em": "Em和弦是一个小三和弦，它由E、G、B三个音组成。中指放于四弦二品，无名指指放于五弦二品，请按照图示摆放手指。",
-      "F": "F和弦是一个大三和弦，它由F、A、C三个音组成。这个和弦有两种按法，一种是大横按按法，另一种是小横按按法，初学者最好从小横按按法开始学起。食指同时按住二弦一品和一弦一品，中指放于二弦二品，无名指放于三弦三品，请按照图示摆放手指。",
-      "G": "G和弦是一个大三和弦，它是C调和弦中的属和弦。由G、B、D三个音组成。请按照图示摆放手指。",
-      "Am": "A和弦是一个大三和弦。它由A、C、E三个音组成。请按照图示摆放手指。"
+      "C": "C和弦是最基本的和弦之一，是我们学习和弦知识的基础，它由C、E、G三个音组成，由于三个音之间是大三度加大三度的关系，被称为大三和弦。食指放于二弦一品，中指放于四弦二品，无名指放于五弦三品，请按照图示摆放手指。C和弦音色明亮、开放，是C大调和许多流行、民谣、古典乐曲的基础。初学者可多练习C与G、F和弦的切换，增强手指灵活性。C和弦有多种按法变化，也可尝试加花音提升表现力。",
+      "Dm": "Dm和弦由D、F、A三个音组成，三个音之间的关系是小三度加大三度，因此我们称其为小三和弦。食指放于一弦一品，中指放于三弦二品，无名指放于三弦二品，请按照图示摆放手指。Dm和弦音色柔和、略带忧郁，常用于抒情、古典乐曲，是C大调和A小调常见和弦。初学者要注意按弦力度，避免杂音。可多练习Dm与A、G和弦的切换，也可尝试Dm7等变化和弦。",
+      "Em": "Em和弦是一个小三和弦，它由E、G、B三个音组成。中指放于四弦二品，无名指指放于五弦二品，请按照图示摆放手指。Em和弦按法简单，音色深沉，广泛应用于摇滚、布鲁斯、民谣等风格。适合初学者练习节奏与旋律。多练习Em与C、G和弦的切换，提升流畅度。也可尝试Em7等变化和弦，丰富音色。",
+      "F": "F和弦是一个大三和弦，它由F、A、C三个音组成。这个和弦有两种按法，一种是大横按按法，另一种是小横按按法，初学者最好从小横按按法开始学起。食指同时按住二弦一品和一弦一品，中指放于二弦二品，无名指放于三弦三品，请按照图示摆放手指。F和弦常用于C大调乐曲，是初学者的难点。建议先练习小横按，逐步过渡到大横按，注意每根弦都要按实发音清晰。F和弦在流行、摇滚、古典等风格中都很常见。",
+      "G": "G和弦是一个大三和弦，它是C调和弦中的属和弦。由G、B、D三个音组成。请按照图示摆放手指。G和弦音色明亮、开放，广泛应用于乡村、摇滚、民谣等风格。多练习G与C、D和弦的切换，提升伴奏能力。G和弦有多种按法，可根据手型选择最适合自己的方式。",
+      "Am": "A和弦是一个大三和弦。它由A、C、E三个音组成。请按照图示摆放手指。Am和弦音色温暖、略带忧郁，常用于抒情、古典乐曲。与C大调关系密切，适合初学者练习。多练习Am与E、Dm和弦的切换，也可尝试Am7等变化和弦，丰富表现力。"
     },
     "quiz": {
       "title": "和弦知识小测验",
@@ -143,12 +143,12 @@
     "chords": {
       "title": "Grundlegende Gitarrenakkorde",
       "subtitle":"Akkord von C",
-      "C": "Der C-Akkord ist einer der grundlegendsten Akkorde. Er besteht aus den Tönen C, E und G. Platziere deine Finger wie im Diagramm gezeigt.",
-      "Dm": "Der Dm-Akkord ist ein Moll-Akkord. Er besteht aus den Tönen D, F und A. Platziere deine Finger wie im Diagramm gezeigt.",
-      "Em": "Der Em-Akkord ist ein Moll-Akkord. Er besteht aus den Tönen E, G und B. Platziere deine Finger wie im Diagramm gezeigt.",
-      "F": "Der F-Akkord ist ein Dur-Akkord. Er besteht aus den Tönen F, A und C. Platziere deine Finger wie im Diagramm gezeigt.",
-      "G": "Der G-Akkord ist ein Dur-Akkord. Er besteht aus den Tönen G, B und D. Platziere deine Finger wie im Diagramm gezeigt.",
-      "Am": "Der A-Akkord ist ein Dur-Akkord. Er besteht aus den Tönen A, C und E. Platziere deine Finger wie im Diagramm gezeigt."
+      "C": "Der C-Akkord ist einer der grundlegendsten Akkorde. Er besteht aus den Tönen C, E und G. Platziere deine Finger wie im Diagramm gezeigt. Der C-Akkord ist die Basis für viele Lieder in C-Dur und wird oft als erster Akkord gelernt. Sein heller, offener Klang ist typisch für Pop, Folk und klassische Musik. Übe den Wechsel zwischen C und G oder F, um die Fingerfertigkeit zu verbessern. Es gibt verschiedene Griffvarianten und Verzierungen, die du ausprobieren kannst.",
+      "Dm": "Der Dm-Akkord ist ein Moll-Akkord. Er besteht aus den Tönen D, F und A. Platziere deine Finger wie im Diagramm gezeigt. Dm klingt weich und melancholisch und wird häufig in Balladen und klassischer Musik verwendet. Er ist ein häufiger Akkord in C-Dur und A-Moll. Achte darauf, die Saiten sauber zu greifen, um Nebengeräusche zu vermeiden. Übe den Wechsel zwischen Dm und A oder G. Dm7 ist eine interessante Variante für einen jazzigen Klang.",
+      "Em": "Der Em-Akkord ist ein Moll-Akkord. Er besteht aus den Tönen E, G und B. Platziere deine Finger wie im Diagramm gezeigt. Em ist einer der einfachsten Akkorde und wird oft in Rock, Blues und Folk gespielt. Sein dunkler, voller Klang eignet sich für Rhythmus- und Melodiespiel. Übe den Wechsel zwischen Em und C oder G. Probiere auch Em7 oder verschiedene Griffvarianten für mehr Klangvielfalt.",
+      "F": "Der F-Akkord ist ein Dur-Akkord. Er besteht aus den Tönen F, A und C. Platziere deine Finger wie im Diagramm gezeigt. Der F-Akkord gilt als schwierig für Anfänger, da oft ein Barré-Griff nötig ist. Er ist in vielen Liedern, besonders in C-Dur, unverzichtbar. Beginne mit der kleinen Barré-Version und arbeite dich zur vollen Barré-Form vor. Achte auf sauberen Klang jeder Saite. F wird in Pop, Rock und Klassik häufig verwendet.",
+      "G": "Der G-Akkord ist ein Dur-Akkord. Er besteht aus den Tönen G, B und D. Platziere deine Finger wie im Diagramm gezeigt. G ist ein vielseitiger Akkord, der in vielen Musikrichtungen wie Country, Rock und Folk vorkommt. Sein offener Klang eignet sich gut für Begleitungen. Übe den Wechsel zwischen G und C oder D. Es gibt verschiedene Griffmöglichkeiten für G – finde die bequemste für dich.",
+      "Am": "Der A-Akkord ist ein Dur-Akkord. Er besteht aus den Tönen A, C und E. Platziere deine Finger wie im Diagramm gezeigt. Am ist ein Moll-Akkord mit warmem, leicht melancholischem Klang, oft in Balladen und klassischer Musik. Er ist eng mit C-Dur verwandt und leicht zu lernen. Übe den Wechsel zwischen Am und E oder Dm. Am7 ist eine schöne Variante für einen weicheren Klang."
     },
     "quiz": {
       "title": "Teste dein Akkordwissen",

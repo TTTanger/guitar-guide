@@ -11,7 +11,6 @@
     <link href="../styles/reset.css" rel="stylesheet">
     <link href="../styles/template.css" rel="stylesheet">
     <link href="../styles/profile.css" rel="stylesheet">
-    <link href="../styles/responsive.css" rel="stylesheet">
     
     <!-- ES6 module (use import/export）have to declare type="module" in HTML -->
     <script type="module" src="../scripts/profile.js" defer></script>
@@ -25,39 +24,37 @@
 <body>
     <header>
         <div class="user-controls">
-            <a href="profile.html" class="user-group" style="background-color:tomato">
-                <img id="user-avatar" alt="User Avatar" />
+            <a href="profile.html" class="user-group" style="background-color: #e8491d;">
+                <img id="user-avatar" src="" alt="User Avatar" />
                 <span id="user-info"></span>
             </a>
-            <a href="#" id="logout">Log out</a>
+            <a href="#" data-translate="button.logout" id="logout">Log out</a>
         </div>
-
         <div class="brand">
-            <h3 id="title" data-translate="profile.title">Profile</h3>
-            <p id="subtitle" data-translate="profile.subtitle">Here you can manage your account</p>
+            <h3 id="title" data-translate="main.title">Guitar Basics Tutorial</h3>
+            <p id="subtitle" data-translate="main.subtitle">Learn, Remember, Practice</p>
         </div>
-
     </header>
-
-    <aside>
-        <button id="fontInc">Font+</button>
-        <button id="fontDec">Font-</button>
-        <button id="cn">中文</button>
-        <button id="en">EN</button>
-        <button id="de">DE</button>
-    </aside>
 
     <nav>
         <ul>
-            <li><a href="index.html"><i class="fas fa-guitar"></i>Basics</a></li>
-            <li><a href="chords.html"><i class="fas fa-music"></i>Chords</a></li>
-            <li><a href="quiz.html"><i class="fas fa-question-circle"></i>Quiz</a></li>
+            <li><a href="index.html" data-translate="nav.basics">Basics</a></li>
+            <li><a href="chords.html" data-translate="nav.chords">Chords</a></li>
+            <li><a href="quiz.html" data-translate="nav.quiz">Quiz</a></li>
         </ul>
     </nav>
 
+    <aside>
+        <button data-translate="aside.fontInc" id="fontInc">Font+</button>
+        <button data-translate="aside.fontDec" id="fontDec">Font-</button>
+        <button data-translate="aside.cn" id="cn">中文</button>
+        <button data-translate="aside.en" id="en">EN</button>
+        <button data-translate="aside.de" id="de">DE</button>
+    </aside>
+
     <main>
-        <section class="profile-card">
-            <div class="profile-avatar">
+        <div class="profile-card">
+            <div class="img-container" id="profile-avatar">
                 <img src="../images/default_avatar.jpeg" alt="Profile Avatar">
             </div>
             <div class="profile-info">
@@ -65,9 +62,9 @@
                 <p data-translate="profile.since"></p>
                 <span id="join-date"></span>
             </div>
-        </section>
+        </div>
 
-        <section class="profile-content">
+        <div class="profile-content">
             <div class="profile-stats">
                 <h3 data-translate="profile.statistics">Statistics</h3>
                 <ul>
@@ -82,33 +79,29 @@
                 <h3 data-translate="profile.accountSettings">Account Settings</h3>
                 <form id="profile-form">
                     <div class="form-group">
-                        <label for="change-avatar" data-translate="profile.changeAvatar">Change Avatar</label>
+                        <h5 for="change-avatar" data-translate="profile.changeAvatar">Change Avatar</h5>
                         <div class="file-upload-container" id="upload-container">
                             <input type="file" id="avatar-input" accept="image/*">
-                            <div class="file-upload-content">
-                                <i class="fas fa-cloud-upload-alt"></i>
-                                <p data-translate="profile.uploadHint">Drag and drop an image here or click to select
-                                </p>
-                                <span class="file-hint" data-translate="profile.supportedFormats">Supported formats:
-                                    JPG, PNG, GIF</span>
-                            </div>
+                            <i class="fas fa-cloud-upload-alt" id="upload-icon"></i>
+                            <label id="upload-hint" for="avatar-input" data-translate="profile.uploadHint">Drag and drop an image here or click to select</label>
+                            <span id="supported-formats" data-translate="profile.supportedFormats">Supported formats: JPG, PNG, GIF</span>
                         </div>
-                        <button type="button" id="save-avatar" data-translate="profile.save">Save</button>
+                        <button class="primary-btn" type="button" id="save-avatar" data-translate="profile.save">Save</button>
                     </div>
 
                     <div class="form-group">
-                        <label for="change-password" data-translate="profile.changePassword">Change Password</label>
+                        <h5 for="change-password" data-translate="profile.changePassword">Change Password</h5>
                         <input type="password" id="current-password" placeholder="Current Password"
                             data-translate="profile.currentPassword">
                         <input type="password" id="new-password" placeholder="New Password"
                             data-translate="profile.newPassword">
                         <input type="password" id="confirm-password" placeholder="Confirm New Password"
                             data-translate="profile.confirmPassword">
-                        <button type="button" id="save-password" data-translate="profile.save">Save</button>
+                        <button class="primary-btn" type="button" id="save-password" data-translate="profile.save">Save</button>
                     </div>
                 </form>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer data-translate="main.copyright"></footer>

@@ -94,5 +94,3 @@ function updatePageInfo() {
     document.getElementById('current-page').textContent = currentPage;
     document.getElementById('total-pages').textContent = Math.ceil(chords.length / itemsPerPage);
 }
-
-

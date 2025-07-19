@@ -10,57 +10,100 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" href="../styles/register.css">
-        <link rel="stylesheet" href="../styles/responsive.css">
 
         <script type="module" src="../scripts/register.js" defer></script>
+        <script src="../scripts/slideshow.js" defer></script>
         
     </head>
     <body>
-        <div class="register-container">
-            <div class="register-header">
-                <i class="fas fa-guitar"></i>
-                <h1>Create Account</h1>
-                <p>Join Guitar Guide Today</p>
-            </div>
-            
-            <form action="../phps/register.php" method="post">
-                <div class="input-group">
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" name="username" required placeholder="Username">
+        <div class="register-wrapper">
+            <div class="slideshow-container">
+                <div class="slideshow-wrapper">
+                    <div class="slide active">
+                        <div class="slide-content">
+                            <i class="fas fa-rocket slide-icon"></i>
+                            <h2>Start Your Journey</h2>
+                            <p>Begin your guitar learning adventure with our comprehensive tutorials and guides</p>
+                        </div>
                     </div>
                     
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" name="password" required placeholder="Password">
+                    <div class="slide">
+                        <div class="slide-content">
+                            <i class="fas fa-chart-line slide-icon"></i>
+                            <h2>Track Progress</h2>
+                            <p>Monitor your learning progress with best score recorded</p>
+                        </div>
                     </div>
                     
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" name="confirm_password" required placeholder="Confirm Password">
+                    <div class="slide">
+                        <div class="slide-content">
+                            <i class="fas fa-book-open slide-icon"></i>
+                            <h2>Learn at Your Pace</h2>
+                            <p>Feel free to learn your lessons</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="terms">
-                    <label class="checkbox-container">
-                        <input type="checkbox" required>
-                        <span class="checkmark"></span>
-                        <span>I agree to the <a href="terms.html">Terms & Conditions</a></span>
-                    </label>
-                </div>
-            
-                <button type="submit" class="register-button">
-                    <span>Create Account</span>
-                    <i class="fas fa-arrow-right"></i>
-                </button>
-
-                <div id="error-message"></div>
                 
-                <div class="login-link">
-                    <span>Already have an account?</span>
-                    <a href="login.html">Sign in</a>
+                <div class="slide-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
                 </div>
-            </form>
+                
+                <button class="slide-control prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slide-control next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="register-container">
+                <div class="register-header">
+                    <i class="fas fa-guitar"></i>
+                    <h1>Create Account</h1>
+                    <p>Join Guitar Guide Today</p>
+                </div>
+                
+                <form action="../phps/register.php" method="post">
+                    <div class="input-group">
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="username" required placeholder="Username">
+                        </div>
+                        
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" name="password" required placeholder="Password">
+                        </div>
+                        
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" name="confirm_password" required placeholder="Confirm Password">
+                        </div>
+                    </div>
+
+                    <div class="terms">
+                        <label class="checkbox-container">
+                            <input type="checkbox" required>
+                            <span class="checkmark"></span>
+                            <span>I agree to the <a href="terms.html">Terms & Conditions</a></span>
+                        </label>
+                    </div>
+                
+                    <button type="submit" class="register-button">
+                        <span>Create Account</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+
+                    <div id="error-message"></div>
+                    
+                    <div class="login-link">
+                        <span>Already have an account?</span>
+                        <a href="login.html">Sign in</a>
+                    </div>
+                </form>
+            </div>
         </div>
     </body>
 </html>

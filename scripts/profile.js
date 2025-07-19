@@ -6,19 +6,19 @@ import { encrypt } from './encrypt.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Get all the elements needed for the profile page
-    const profileAvatar = document.querySelector('.profile-avatar img'); // Main profile avatar image
-    const bestScore = document.getElementById('best-score'); // Best quiz score display
-    const username = document.querySelector('.profile-info h2') // Username display
-    const user_avatar = document.getElementById('user-avatar') // Avatar in the header or elsewhere
-    const joinDate = document.getElementById('join-date') // Join date display
-    const uploadAvatarButton = document.getElementById('save-avatar'); // Button to upload avatar
-    const avatarInput = document.getElementById('avatar-input'); // File input for avatar
-    const currentPassword = document.getElementById('current-password'); // Current password input
-    const newPassword = document.getElementById('new-password'); // New password input
-    const confirmPassword = document.getElementById('confirm-password'); // Confirm new password input
-    const uploadPasswordButton = document.getElementById('save-password'); // Button to update password
-    const uploadContainer = document.getElementById('upload-container'); // Container for avatar upload UI
-
+    const profileAvatar = document.querySelector('#profile-avatar img'); 
+    const bestScore = document.getElementById('best-score'); 
+    const username = document.querySelector('.profile-info h2') 
+    const user_avatar = document.getElementById('user-avatar') 
+    const joinDate = document.getElementById('join-date')
+    const uploadAvatarButton = document.getElementById('save-avatar');
+    const avatarInput = document.getElementById('avatar-input'); 
+    const currentPassword = document.getElementById('current-password'); 
+    const newPassword = document.getElementById('new-password'); 
+    const confirmPassword = document.getElementById('confirm-password'); 
+    const uploadPasswordButton = document.getElementById('save-password'); 
+    const uploadContainer = document.getElementById('upload-container'); 
+/*--------------------------------------------------------------------------*/
     /*
      * Fetch and display the user profile information from the server
      */
@@ -27,11 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             if (data.success) {
                 console.log(data)
-                profileAvatar.src = data.user_avatar; // Set profile avatar image
-                user_avatar.src = data.user_avatar;   // Set header/avatar image
-                bestScore.textContent = data.best_score; // Show best score
-                username.textContent = data.username;     // Show username
-                joinDate.textContent = data.join_date;    // Show join date
+                profileAvatar.src = data.user_avatar; 
+                user_avatar.src = data.user_avatar;   
+                bestScore.textContent = data.best_score; 
+                username.textContent = data.username;     
+                joinDate.textContent = data.join_date;    
             } else {
                 console.error('Failed to load profile:', data.error);
             }
@@ -39,24 +39,21 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => {
             console.error('Error loading profile:', error);
         });
-
+/*--------------------------------------------------------------------------*/
     /*
      * Handle password update logic when the user clicks the update button
      */
     uploadPasswordButton.addEventListener('click', () => {
-        // Verify the input fields are filled
         if (!currentPassword.value || !newPassword.value) {
             alert('Please fill in both password fields');
             return;
         }
 
-        // Verify the length of the new password
         if (newPassword.value.length < 6) {
             alert('New password must be at least 6 characters long');
             return;
         }
 
-        // Prepare form data for the password update request
         const formData = new FormData();
         const time = getFormattedTime();
         console.log("Time: ", time);
@@ -70,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
         formData.set('current_password', encryptedCurrentPsw);
         formData.set('new_password', encryptedNewPsw);
 
-        // Disable the button and show updating status
         uploadPasswordButton.disabled = true;
         uploadPasswordButton.setAttribute('data-translate', 'profile.uploading');
         langController.updateContent();
@@ -102,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
             langController.updateContent();
         });
     })
-
+/*--------------------------------------------------------------------------*/
     /*
      * Handle avatar upload logic when the user clicks the upload button
      */
@@ -118,12 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
         formData.append('action', 'postAvatar');
         formData.append('avatar', file);
 
-        // Disable the button and show uploading status
         uploadAvatarButton.disabled = true;
         uploadAvatarButton.setAttribute('data-translate', 'profile.uploading');
         langController.updateContent();
 
-        // Send the avatar upload request to the server
         fetch('../phps/profile.php', {
             method: 'POST',
             body: formData
@@ -171,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target.files && e.target.files[0]) {
             // Optional: Add visual feedback
             const fileName = e.target.files[0].name;
-            const fileInfo = uploadContainer.querySelector('.file-upload-content p');
+            const fileInfo = uploadContainer.querySelector('#upload-hint');
             if (fileInfo) {
                 fileInfo.textContent = `Selected: ${fileName}`;
             }
@@ -186,6 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /*
      * Drag-and-drop avatar upload support
      * The following handlers allow users to drag a file onto the upload area
+     * Generated by Claude 3.5
      */
     // Prevent default drag behaviors for both the upload container and the document body
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {

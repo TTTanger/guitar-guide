@@ -15,7 +15,6 @@
     <link href="../styles/reset.css" rel="stylesheet" />
     <link href="../styles/template.css" rel="stylesheet" />
     <link href="../styles/index.css" rel="stylesheet" />
-    <link href="../styles/responsive.css" rel="stylesheet" />
     
     <script src="../scripts/auth.js" defer></script>
     <script src="../scripts/functions.js" defer></script>
@@ -30,7 +29,7 @@
                 <img id="user-avatar" src="" alt="User Avatar" />
                 <span id="user-info"></span>
             </a>
-            <a href="#" id="logout">Log out</a>
+            <a href="#" data-translate="button.logout" id="logout">Log out</a>
         </div>
         <div class="brand">
             <h3 id="title" data-translate="main.title">Guitar Basics Tutorial</h3>
@@ -40,18 +39,18 @@
 
     <nav>
         <ul>
-            <li class="current-nav"><a href="index.html"><i class="fas fa-guitar"></i>Basics</a></li>
-            <li><a href="chords.html"><i class="fas fa-music"></i>Chords</a></li>
-            <li><a href="quiz.html"><i class="fas fa-question-circle"></i>Quiz</a></li>
+            <li class="current-nav"><a href="index.html" data-translate="nav.basics">Basics</a></li>
+            <li><a href="chords.html" data-translate="nav.chords">Chords</a></li>
+            <li><a href="quiz.html" data-translate="nav.quiz">Quiz</a></li>
         </ul>
     </nav>
 
     <aside>
-        <button id="fontInc">Font+</button>
-        <button id="fontDec">Font-</button>
-        <button id="cn">中文</button>
-        <button id="en">EN</button>
-        <button id="de">DE</button>
+        <button data-translate="aside.fontInc" id="fontInc">Font+</button>
+        <button data-translate="aside.fontDec" id="fontDec">Font-</button>
+        <button data-translate="aside.cn" id="cn">中文</button>
+        <button data-translate="aside.en" id="en">EN</button>
+        <button data-translate="aside.de" id="de">DE</button>
     </aside>
 
     <main id="basics-main">
