@@ -4,35 +4,70 @@ A comprehensive web-based guitar learning platform that provides interactive tut
 
 ## Table of Contents
 
-1. [Project Architecture](#project-architecture)
-2. [UI Design Inspiration](#ui-design-inspiration)
-3. [AJAX Implementation](#ajax-implementation)
-4. [Security & Encryption](#security--encryption)
-5. [Responsive Design](#responsive-design)
-6. [Font Size Management](#font-size-management)
-7. [Internationalization](#internationalization)
-8. [Slideshow Component](#slideshow-component)
-9. [User Profile Management](#user-profile-management)
-10. [Session Management](#session-management)
-11. [Dynamic DOM Manipulation](#dynamic-dom-manipulation)
-12. [Project Advantages](#project-advantages)
+1. [Project Architecture](#1-project-architecture)
+   1.1. [Frontend Structure](#11-frontend-structure)
+   1.2. [Backend Structure](#12-backend-structure)
+   1.3. [Key Technical Implementation](#13-key-technical-implementation)
+2. [UI Design Inspiration](#2-ui-design-inspiration)
+   2.1. [Design References](#21-design-references)
+   2.2. [Design System](#22-design-system)
+3. [AJAX Implementation](#3-ajax-implementation)
+   3.1. [Authentication AJAX](#31-authentication-ajax)
+   3.2. [Profile Management AJAX](#32-profile-management-ajax)
+   3.3. [Quiz Dynamic Loading](#33-quiz-dynamic-loading)
+   3.4. [AJAX Principles](#34-ajax-principles)
+4. [Security & Encryption](#4-security--encryption)
+   4.1. [Encryption Algorithm](#41-encryption-algorithm)
+   4.2. [Decryption Implementation](#42-decryption-implementation)
+   4.3. [Security Features](#43-security-features)
+5. [Responsive Design](#5-responsive-design)
+   5.1. [Mobile Layout Implementation](#51-mobile-layout-implementation)
+   5.2. [CSS Media Queries](#52-css-media-queries)
+   5.3. [Mobile Features](#53-mobile-features)
+6. [Font Size Management](#6-font-size-management)
+   6.1. [Font Controller Implementation](#61-font-controller-implementation)
+   6.2. [Accessibility Features](#62-accessibility-features)
+7. [Internationalization](#7-internationalization)
+   7.1. [Translation Architecture](#71-translation-architecture)
+   7.2. [Translation Sources](#72-translation-sources)
+   7.3. [Database Translation Structure](#73-database-translation-structure)
+8. [Slideshow Component](#8-slideshow-component)
+   8.1. [Slideshow Implementation](#81-slideshow-implementation)
+   8.2. [Features](#82-features)
+9. [User Profile Management](#9-user-profile-management)
+   9.1. [Avatar Upload System](#91-avatar-upload-system)
+   9.2. [Backend File Handling](#92-backend-file-handling)
+   9.3. [Security Features](#93-security-features)
+10. [Session Management](#10-session-management)
+    10.1. [Session Verification](#101-session-verification)
+    10.2. [Frontend Session Handling](#102-frontend-session-handling)
+    10.3. [Security Measures](#103-security-measures)
+11. [Dynamic DOM Manipulation](#11-dynamic-dom-manipulation)
+    11.1. [Chord Learning System](#111-chord-learning-system)
+    11.2. [Quiz Dynamic Generation](#112-quiz-dynamic-generation)
+    11.3. [Features](#113-features)
+12. [Project Advantages](#12-project-advantages)
+    12.1. [Technical Excellence](#121-technical-excellence)
+    12.2. [User Experience](#122-user-experience)
+    12.3. [Educational Value](#123-educational-value)
+    12.4. [Development Quality](#124-development-quality)
 
-## Project Architecture
+## 1. Project Architecture
 
 The project follows a modular architecture with clear separation of concerns:
 
-### Frontend Structure
+### 1.1. Frontend Structure
 - **HTML Pages**: Located in `htmls/` directory with semantic markup
 - **CSS Styles**: Modular CSS files in `styles/` with responsive design
 - **JavaScript Modules**: ES6 modules in `scripts/` for functionality
 - **Assets**: Images and uploads organized in dedicated directories
 
-### Backend Structure
+### 1.2. Backend Structure
 - **PHP APIs**: RESTful endpoints in `phps/` directory
 - **Database**: MySQL with prepared statements for security
 - **Configuration**: JSON files for static data and translations
 
-### Key Technical Implementation
+### 1.3. Key Technical Implementation
 
 ```javascript
 // Modular JavaScript architecture with ES6 imports
@@ -58,27 +93,27 @@ class FontSizeController {
 }
 ```
 
-## UI Design Inspiration
+## 2. UI Design Inspiration
 
 The UI design draws inspiration from modern educational platforms and music learning websites:
 
-### Design References
+### 2.1. Design References
 - **Duolingo**: Clean, card-based layout with progress indicators
 - **Fender Play**: Guitar-specific learning interface with visual chord diagrams
 - **Spotify**: Dark theme with orange accent colors for music-related content
 - **GitHub**: Professional navigation and user profile management
 
-### Design System
+### 2.2. Design System
 - **Color Palette**: Dark theme (#35424a) with orange accent (#e8491d)
 - **Typography**: Open Sans font family for readability
 - **Layout**: Fixed header with sidebar navigation and content area
 - **Components**: Card-based content with consistent spacing and shadows
 
-## AJAX Implementation
+## 3. AJAX Implementation
 
 AJAX is extensively used throughout the application for seamless user experience:
 
-### Authentication AJAX
+### 3.1. Authentication AJAX
 ```javascript
 // Session verification on page load
 fetch('../phps/auth.php')
@@ -93,7 +128,7 @@ fetch('../phps/auth.php')
     });
 ```
 
-### Profile Management AJAX
+### 3.2. Profile Management AJAX
 ```javascript
 // Avatar upload with FormData
 const formData = new FormData();
@@ -113,7 +148,7 @@ fetch('../phps/profile.php', {
 });
 ```
 
-### Quiz Dynamic Loading
+### 3.3. Quiz Dynamic Loading
 ```javascript
 // Dynamic question generation and rendering
 function renderQuestion(quizContainer, questionObj, questionIndex, totalQuestions) {
@@ -125,17 +160,17 @@ function renderQuestion(quizContainer, questionObj, questionIndex, totalQuestion
 }
 ```
 
-### AJAX Principles
+### 3.4. AJAX Principles
 - **Asynchronous Communication**: Non-blocking requests for better UX
 - **JSON Data Exchange**: Structured data format for API responses
 - **Error Handling**: Comprehensive error catching and user feedback
 - **Loading States**: Visual feedback during request processing
 
-## Security & Encryption
+## 4. Security & Encryption
 
 The application implements a custom encryption system using time-based dynamic keys:
 
-### Encryption Algorithm
+### 4.1. Encryption Algorithm
 ```javascript
 // Vigenère cipher variant with time-based key
 export function encrypt(data, time) {
@@ -158,7 +193,7 @@ export function encrypt(data, time) {
 }
 ```
 
-### Decryption Implementation
+### 4.2. Decryption Implementation
 ```php
 // PHP decryption with matching algorithm
 function decrypt($encrypted, $time) {
@@ -181,17 +216,17 @@ function decrypt($encrypted, $time) {
 }
 ```
 
-### Security Features
+### 4.3. Security Features
 - **Time-based Keys**: Each request uses a unique timestamp as encryption key
 - **MD5 Hashing**: Key generation using MD5 for consistency
 - **Printable ASCII Range**: Encryption limited to safe character range
 - **Session Management**: Secure session handling with PHP sessions
 
-## Responsive Design
+## 5. Responsive Design
 
 The application implements a comprehensive mobile-responsive design:
 
-### Mobile Layout Implementation
+### 5.1. Mobile Layout Implementation
 ```javascript
 // Mobile detection and layout switching
 function initMobileLayout() {
@@ -211,7 +246,7 @@ function createMobileButtons() {
 }
 ```
 
-### CSS Media Queries
+### 5.2. CSS Media Queries
 ```css
 @media (max-width: 767px) {
     header {
@@ -239,17 +274,17 @@ function createMobileButtons() {
 }
 ```
 
-### Mobile Features
+### 5.3. Mobile Features
 - **Touch Gestures**: Swipe support for slideshow navigation
 - **Overlay System**: Modal overlays for mobile navigation
 - **Adaptive Layout**: Content reflow for different screen sizes
 - **Touch-friendly Controls**: Larger touch targets for mobile interaction
 
-## Font Size Management
+## 6. Font Size Management
 
 Dynamic font size adjustment system with proportional scaling:
 
-### Font Controller Implementation
+### 6.1. Font Controller Implementation
 ```javascript
 class FontSizeController {
     constructor() {
@@ -283,17 +318,17 @@ class FontSizeController {
 }
 ```
 
-### Accessibility Features
+### 6.2. Accessibility Features
 - **Proportional Scaling**: All elements scale proportionally
 - **Size Limits**: Minimum and maximum size constraints
 - **Persistent Settings**: Font size preferences saved in localStorage
 - **Keyboard Support**: Arrow key navigation for font adjustment
 
-## Internationalization
+## 7. Internationalization
 
 Multi-language support with hybrid translation system:
 
-### Translation Architecture
+### 7.1. Translation Architecture
 ```javascript
 class LanguageController {
     constructor() {
@@ -322,13 +357,13 @@ class LanguageController {
 }
 ```
 
-### Translation Sources
+### 7.2. Translation Sources
 - **Static Content**: Stored in `configs/lang.json` for page-specific content
 - **Dynamic Content**: Database-stored translations for reusable components
 - **Component Reuse**: Navigation, buttons, and common elements from database
 - **Content Separation**: Page-specific content in JSON files
 
-### Database Translation Structure
+### 7.3. Database Translation Structure
 ```php
 // PHP translation loading
 $sql = "SELECT key_name, lang, value FROM translations";
@@ -345,11 +380,11 @@ while ($row = $result->fetch_assoc()) {
 }
 ```
 
-## Slideshow Component
+## 8. Slideshow Component
 
 Interactive slideshow with multiple navigation methods:
 
-### Slideshow Implementation
+### 8.1. Slideshow Implementation
 ```javascript
 class Slideshow {
     constructor() {
@@ -389,18 +424,18 @@ class Slideshow {
 }
 ```
 
-### Features
+### 8.2. Features
 - **Auto-play**: Automatic slide progression with configurable timing
 - **Touch Support**: Swipe gestures for mobile navigation
 - **Keyboard Navigation**: Arrow key support for accessibility
 - **Indicator Dots**: Visual progress indicators
 - **Pause on Hover**: Auto-play pauses when user hovers over slideshow
 
-## User Profile Management
+## 9. User Profile Management
 
 Comprehensive user account management with file upload capabilities:
 
-### Avatar Upload System
+### 9.1. Avatar Upload System
 ```javascript
 // File upload with drag-and-drop support
 uploadAvatarButton.addEventListener('click', () => {
@@ -428,7 +463,7 @@ uploadAvatarButton.addEventListener('click', () => {
 });
 ```
 
-### Backend File Handling
+### 9.2. Backend File Handling
 ```php
 function postAvatar($id, $conn) {
     $file = $_FILES['avatar'];
@@ -460,17 +495,17 @@ function postAvatar($id, $conn) {
 }
 ```
 
-### Security Features
+### 9.3. Security Features
 - **File Type Validation**: Only image formats allowed
 - **Random Filenames**: Prevents filename conflicts and security issues
 - **Database Integration**: File paths stored in database
 - **Drag-and-Drop Support**: Enhanced user experience
 
-## Session Management
+## 10. Session Management
 
 Robust session handling with authentication verification:
 
-### Session Verification
+### 10.1. Session Verification
 ```php
 // auth.php - Session status checking
 session_start();
@@ -498,7 +533,7 @@ if ($response['loggedin'] && isset($_SESSION['id'])) {
 echo json_encode($response);
 ```
 
-### Frontend Session Handling
+### 10.2. Frontend Session Handling
 ```javascript
 // Automatic session verification on page load
 document.addEventListener('DOMContentLoaded', function() {
@@ -525,17 +560,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-### Security Measures
+### 10.3. Security Measures
 - **Session Validation**: Every page verifies session status
 - **Automatic Redirects**: Unauthorized users redirected to login
 - **Database Integration**: User data fetched from database
 - **Error Handling**: Graceful handling of session failures
 
-## Dynamic DOM Manipulation
+## 11. Dynamic DOM Manipulation
 
 Advanced DOM manipulation for interactive content:
 
-### Chord Learning System
+### 11.1. Chord Learning System
 ```javascript
 function createChordCard(chord) {
     const card = document.createElement('div');
@@ -571,7 +606,7 @@ function createChordCard(chord) {
 }
 ```
 
-### Quiz Dynamic Generation
+### 11.2. Quiz Dynamic Generation
 ```javascript
 function renderQuestion(quizContainer, questionObj, questionIndex, totalQuestions) {
     quizContainer.innerHTML = '';
@@ -603,33 +638,33 @@ function renderQuestion(quizContainer, questionObj, questionIndex, totalQuestion
 }
 ```
 
-### Features
+### 11.3. Features
 - **Dynamic Content Creation**: Elements created programmatically
 - **Event Binding**: Interactive elements with event listeners
 - **Translation Integration**: Dynamic content supports i18n
 - **Responsive Design**: Elements adapt to different screen sizes
 
-## Project Advantages
+## 12. Project Advantages
 
-### Technical Excellence
+### 12.1. Technical Excellence
 - **Modern Architecture**: ES6+ JavaScript with modular design
 - **Security First**: Custom encryption with time-based keys
 - **Performance Optimized**: Efficient DOM manipulation and AJAX
 - **Scalable Design**: Modular code structure for easy maintenance
 
-### User Experience
+### 12.2. User Experience
 - **Responsive Design**: Seamless experience across all devices
 - **Accessibility**: Keyboard navigation and screen reader support
 - **Internationalization**: Multi-language support with hybrid system
 - **Interactive Learning**: Dynamic quiz system with visual feedback
 
-### Educational Value
+### 12.3. Educational Value
 - **Visual Learning**: Chord diagrams and fingerboard illustrations
 - **Progressive Difficulty**: Structured learning from basics to advanced
 - **Practice Tools**: Interactive quiz system for knowledge reinforcement
 - **Comprehensive Content**: Covers fundamental guitar concepts
 
-### Development Quality
+### 12.4. Development Quality
 - **Clean Code**: Well-documented and maintainable codebase
 - **Error Handling**: Comprehensive error management throughout
 - **Cross-browser Compatibility**: Works across modern browsers
