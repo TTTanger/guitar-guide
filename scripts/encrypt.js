@@ -11,15 +11,14 @@
  */
 
 export function encrypt(data, time) {
-    const key = md5(time).slice(0);
+    const key = md5(time);
 
-    const dataLen = data.length; // Length of the password
-    const keyLen = key.length; // Length of the key
+    const dataLen = data.length; 
+    const keyLen = key.length; 
     let encrypted = '';
 
-    // Loop through each character of the password
     for (let i = 0; i < dataLen; i++) {
-        const pChar = data[i]; // Current character from the password
+        const pChar = data[i]; 
         const kChar = key[i % keyLen]; // Corresponding character from the key (repeats if needed)
 
         // Convert characters to offsets (printable ASCII range)

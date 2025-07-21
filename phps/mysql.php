@@ -1,7 +1,8 @@
 <?php
-// Database connection configuration
-// These constants define the connection parameters for MySQL
-
+/**
+ * Database connection configuration
+ * These constants define the connection parameters for MySQL
+*/
 define('DB_SERVER', 'localhost'); // MySQL server address
 define('DB_USERNAME', 'guitar');    // MySQL username
 define('DB_PASSWORD', '');        // MySQL password (empty by default)

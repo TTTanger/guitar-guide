@@ -1,21 +1,23 @@
-// Wait for the DOM to be fully loaded before running the script
-// This ensures all elements are available for manipulation
-
+/**
+ * Handles user logout functionality.
+ * Sends a request to the server to log out the user and redirects on success.
+ * @author Junzhe Luo
+ */
 document.addEventListener('DOMContentLoaded', function() {
     const logoutLink = document.getElementById('logout'); 
-    
-    // Add a click event listener to the logout link
+
+    /**
+     * Handles the click event for the logout link.
+     * Prevents default navigation, sends logout request, and redirects on success.
+     * @param {Event} e The click event
+     */
     logoutLink.addEventListener('click', function(e) {
         e.preventDefault(); 
-        
-        // Send a request to the server to log out the user
         fetch('../phps/logout.php')
             .then(response => response.json()) 
             .then(data => {
-                console.log('Response:', data);  
                 if (data.success) {
                     window.location.href = data.redirect;
-                    console.log('Logout successful:', data.message);
                 } else {
                     console.error('Logout failed:', data.error);
                 }

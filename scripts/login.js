@@ -25,22 +25,24 @@ document.addEventListener('DOMContentLoaded', function() {
         // Prevent the default form submission (which would reload the page)
         e.preventDefault();
 
-        
         const time = getFormattedTime();
-
-        // Collect all the data from the form fields
         const formData = new FormData(this);
         const password = formData.get('password');
-        // Encrypt the password before sending it to the server
-        // (see encrypt.js for the encryption algorithm)
-        const encryptedPassword = encrypt(password, time);
+        const encryptedPassword = encrypt(password, time); // (see encrypt.js for the encryption algorithm)
+
         formData.set('password', encryptedPassword); 
         formData.set('time', time);
 
-        const encryptedPswShow = document.createElement('p');
-        encryptedPswShow.textContent = encryptedPassword;
-        loginForm.appendChild(encryptedPswShow);
-
+        let encryptedPswShow = document.getElementById('encryptedPswShow');
+        if (!encryptedPswShow) {
+            encryptedPswShow = document.createElement('div');
+            encryptedPswShow.id = 'encryptedPswShow';
+            encryptedPswShow.textContent = encryptedPassword;
+            loginForm.appendChild(encryptedPswShow);
+        } else {
+            encryptedPswShow.textContent = encryptedPassword;
+        }
+        
         // Simulate a delay (for user experience or testing)
         await sleep(3000); 
         
@@ -55,15 +57,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const data = await response.json();
             console.log('Processing data:', data); 
             if (data.success) {
-                // If login is successful, redirect the user to the provided URL
                 window.location.href = data.redirect;
             } else {
-                // If login fails, display the error message from the server
                 errorDiv.textContent = data.error;
                 errorDiv.classList.add('show');
             }
         } catch (error) {
-            // Handle network or server errors
             console.error('Error:', error); 
             errorDiv.textContent = 'An error occurred. Please try again.';
             errorDiv.style.color = 'red';

@@ -1,4 +1,8 @@
 /* Profile Page Styles */
+#user-group-active{
+    background-color: #e8491d;
+}
+
 .profile-container {
     max-width: 1000px;
     margin: 80px auto 40px; 
