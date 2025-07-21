@@ -13,21 +13,20 @@ class Slideshow {
     
     init() {
         if (this.slides.length === 0) return;
-        
         this.bindEvents();
-        
         this.startAutoPlay();
-        
         this.showSlide(0);
     }
     
     bindEvents() {
         if (this.prevBtn) {
             this.prevBtn.addEventListener('click', () => this.prevSlide());
+            this.prevBtn.title = "Previous Slide"
         }
         
         if (this.nextBtn) {
             this.nextBtn.addEventListener('click', () => this.nextSlide());
+            this.nextBtn.title = "Next Slide"
         }
         
         this.indicators.forEach((indicator, index) => {
@@ -39,26 +38,14 @@ class Slideshow {
             slideshowContainer.addEventListener('mouseenter', () => this.stopAutoPlay());
             slideshowContainer.addEventListener('mouseleave', () => this.startAutoPlay());
         }
-        
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                this.prevSlide();
-            } else if (e.key === 'ArrowRight') {
-                this.nextSlide();
-            }
-        });
-        
-        this.initTouchSupport();
     }
     
     showSlide(index) {
         this.slides.forEach(slide => slide.classList.remove('active'));
         this.indicators.forEach(indicator => indicator.classList.remove('active'));
-        
         this.currentSlide = index;
         this.slides[index].classList.add('active');
         this.indicators[index].classList.add('active');
-        
         this.resetAutoPlay();
     }
     
@@ -74,7 +61,6 @@ class Slideshow {
     
     startAutoPlay() {
         if (this.autoPlayInterval) return;
-        
         this.autoPlayInterval = setInterval(() => {
             this.nextSlide();
         }, this.autoPlayDelay);
@@ -92,35 +78,6 @@ class Slideshow {
         this.startAutoPlay();
     }
     
-    initTouchSupport() {
-        let startX = 0;
-        let endX = 0;
-        const slideshowContainer = document.querySelector('.slideshow-container');
-        
-        if (!slideshowContainer) return;
-        
-        slideshowContainer.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-        });
-        
-        slideshowContainer.addEventListener('touchend', (e) => {
-            endX = e.changedTouches[0].clientX;
-            this.handleSwipe();
-        });
-        
-        this.handleSwipe = () => {
-            const swipeThreshold = 50;
-            const diff = startX - endX;
-            
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    this.nextSlide();
-                } else {
-                    this.prevSlide();
-                }
-            }
-        };
-    }
     
     goToSlide(index) {
         if (index >= 0 && index < this.slides.length) {

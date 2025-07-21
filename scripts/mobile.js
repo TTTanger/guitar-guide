@@ -110,7 +110,7 @@ function createOverlay() {
 }
 
 /**
- * Bind events for menu, sidebar, overlay, and ESC key
+ * Bind events for menu, sidebar and overlay
  */
 function addEventListeners() {
     const menuBtn = document.querySelector('.mobile-menu-toggle');

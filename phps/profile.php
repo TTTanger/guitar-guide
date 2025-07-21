@@ -1,4 +1,9 @@
 <?php
+/**
+ * User Profile Management Script
+ * Handles fetching user profile, updating password, and uploading avatar.
+ * @author Junzhe Luo
+ */
 session_start();
 header('Content-Type: application/json');
 require_once "mysql.php";
@@ -10,6 +15,7 @@ $id = $_SESSION['id'];
  * @param int $id User ID
  * @param mysqli $conn Database connection
  * @return void
+ * @author Junzhe Luo
  */
 function getUserProfile($id, $conn)
 {
@@ -44,6 +50,7 @@ function getUserProfile($id, $conn)
  * @param string $time Time string for decryption
  * @param mysqli $conn Database connection
  * @return void
+ * @author Junzhe Luo
  */
 function updatePassword($id, $time, $conn)
 {
@@ -84,11 +91,10 @@ function updatePassword($id, $time, $conn)
 
 /**
  * Handle avatar upload and update the user's avatar path in the database.
- * @author Claude 3.5 Sonnet
- * 
  * @param int $id User ID
  * @param mysqli $conn Database connection
  * @return void
+ * @author Junzhe Luo
  */
 function postAvatar($id, $conn)
 {
@@ -126,6 +132,7 @@ function postAvatar($id, $conn)
 
 /**
  * Main logic: route the request to the appropriate function based on action.
+ * @author Junzhe Luo
  */
 $action = $_GET['action'] ?? $_POST['action'] ?? '';
 switch ($action) {

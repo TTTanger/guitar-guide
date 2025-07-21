@@ -1,6 +1,10 @@
 import { getFormattedTime } from './utils.js';
 import { encrypt } from './encrypt.js';
 
+/**
+ * Handles user profile page logic including fetching profile, updating password, and uploading avatar.
+ * @author Junzhe Luo
+ */
 document.addEventListener('DOMContentLoaded', () => {
     const profileAvatar = document.querySelector('#profile-avatar img'); 
     const bestScore = document.getElementById('best-score'); 
@@ -16,7 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const uploadContainer = document.getElementById('upload-container'); 
 
     /**
-     * Fetch and display the user profile information from the server
+     * Fetches and displays the user profile information from the server.
+     * @author Junzhe Luo
      */
     fetch('../phps/profile.php?action=getUserProfile')
         .then(response => response.json())
@@ -36,7 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
     /**
-     * Handle password update logic when the user clicks the update button
+     * Handles password update logic when the user clicks the update button.
+     * @author Junzhe Luo
      */
     uploadPasswordButton.addEventListener('click', () => {
         if (!currentPassword.value || !newPassword.value) {
@@ -85,7 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /**
-     * Handle avatar upload logic when the user clicks the upload button
+     * Handles avatar upload logic when the user clicks the upload button.
+     * @author Junzhe Luo
      */
     uploadAvatarButton.addEventListener('click', () => {
         const file = avatarInput.files[0];
@@ -132,14 +139,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /**
-     * Allow clicking the upload container to trigger the file input
+     * Allows clicking the upload container to trigger the file input.
+     * @author Junzhe Luo
      */
     uploadContainer.addEventListener('click', () => {
         avatarInput.click();
     });
 
     /**
-     * Show the selected file name when a file is chosen
+     * Shows the selected file name when a file is chosen.
+     * @author Junzhe Luo
      */
     avatarInput.addEventListener('change', (e) => {
         if (e.target.files && e.target.files[0]) {
@@ -152,45 +161,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /**
-     * Drag-and-drop avatar upload support: highlight the upload area on drag
+     * Drag-and-drop avatar upload support: highlight the upload area on drag.
+     * @author Junzhe Luo
      */
     ['dragenter', 'dragover'].forEach(eventName => {
         uploadContainer.addEventListener(eventName, highlight, false);
     });
 
     /**
-     * Drag-and-drop avatar upload support: remove highlight on drag leave or drop
+     * Drag-and-drop avatar upload support: remove highlight on drag leave or drop.
+     * @author Junzhe Luo
      */
     ['dragleave', 'drop'].forEach(eventName => {
         uploadContainer.addEventListener(eventName, unhighlight, false);
     });
 
     /**
-     * Handle file drop event for avatar upload
+     * Handles file drop event for avatar upload.
      * @param {Event} e The drop event
+     * @author Junzhe Luo
      */
     uploadContainer.addEventListener('drop', handleDrop, false);
 
     /**
-     * Add a visual highlight to the upload area
+     * Adds a visual highlight to the upload area.
      * @param {Event} e The drag event
+     * @author Junzhe Luo
      */
     function highlight(e) {
         uploadContainer.classList.add('dragover');
     }
 
     /**
-     * Remove the visual highlight from the upload area
+     * Removes the visual highlight from the upload area.
      * @param {Event} e The drag event
+     * @author Junzhe Luo
      */
     function unhighlight(e) {
         uploadContainer.classList.remove('dragover');
     }
 
     /**
-     * Handle the file drop event for avatar upload
-     * Sets the dropped file as the input's file and triggers the change event
+     * Handles the file drop event for avatar upload.
+     * Sets the dropped file as the input's file and triggers the change event.
      * @param {Event} e The drop event
+     * @author Junzhe Luo
      */
     function handleDrop(e) {
         const dt = e.dataTransfer;

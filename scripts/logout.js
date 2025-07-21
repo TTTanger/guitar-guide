@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
      * Handles the click event for the logout link.
      * Prevents default navigation, sends logout request, and redirects on success.
      * @param {Event} e The click event
+     * @author Junzhe Luo
      */
     logoutLink.addEventListener('click', function(e) {
         e.preventDefault(); 

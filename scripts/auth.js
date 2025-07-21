@@ -1,20 +1,21 @@
-// Wait for the DOM to be fully loaded before running the script
-// This ensures all elements are available for manipulation
+/**
+ * Handles user authentication check on page load.
+ * Redirects to login page if not authenticated, otherwise displays user info and avatar.
+ * @author Junzhe Luo
+ */
 document.addEventListener('DOMContentLoaded', function() {
     /**
-     * Check user session by making a request to the backend auth.php
-     * This determines if the user is logged in or not.
+     * Checks user session by making a request to the backend auth.php.
+     * Redirects to login page if not logged in, otherwise updates user info on the page.
+     * @author Junzhe Luo
      */
     fetch('../phps/auth.php')
-        .then(response => response.json()) // Parse the JSON response
+        .then(response => response.json())
         .then(data => {
-            // If not logged in, redirect to login page
             if (!data.loggedin) {
                 window.location.href = 'login.html';
             } else {
-                // Display the username in the user-info element
                 const userInfo = document.getElementById('user-info');
-                // Display the user's avatar if available
                 const userAvatar = document.getElementById('user-avatar');
                 if (userInfo) {
                     userInfo.textContent = data.username;
@@ -25,8 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         })
         .catch(error => {
-            // If the authentication check fails (e.g., network error), redirect to login
-            console.error('Auth check failed:', error);
             window.location.href = 'login.html';
         });
 });
